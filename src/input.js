@@ -33,41 +33,46 @@ class Input extends Component {
 
   render() {
     return (
-      <div className="bigPadding">
+      <form className="bigPadding">
+
         <div className="smallPadding">
+        <h4>Add a coffee to the database</h4>
           <input
             type="text"
             onChange={e => this.setState({ coffee: e.target.value })}
-            placeholder="add a coffee to the database"
           />
         </div>
+
         <div className="smallPadding">
+        <h4>Who bought the coffee?</h4>
           <input
             type="text"
             onChange={e => this.setState({ name: e.target.value })}
-            placeholder="who bought the coffee?"
           />
         </div>
+
         <div className="smallPadding">
+        <h4>What date was it opened?</h4>
           <input
             type="date"
             onChange={e => this.setState({ date: e.target.value })}
-            placeholder="what date was it opened"
           />
         </div>
+
         <div className="smallPadding">
+        <h4>Add a note about the coffee</h4>
           <input
             type="text"
             onChange={e => this.setState({ message: e.target.value })}
-            placeholder="add a note about the coffee"
           />
         </div>
+
         <div className="smallPadding">
           <button onClick={() => this.putDataToDB(this.state.message, this.state.name, this.state.coffee, this.state.date)}>
-            ADD
+            <h4>Add to database</h4>
           </button>
         </div>
-      </div>
+      </form>
     );
   }
 }

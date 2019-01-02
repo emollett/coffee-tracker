@@ -48,37 +48,49 @@ class Edit extends Component {
   render() {
     return (
 
-      <div>
-        <div className="smallPadding">
-          <input
-            type="text"
-            onChange={e => this.setState({ idToDelete: e.target.value })}
-            placeholder="put id of item to delete here"
-          />
-          <button onClick={() => this.deleteFromDB(this.state.idToDelete)}>
-            DELETE
-          </button>
+      <div className="outputBoxEdit">
+
+        <div className="deleting">
+            <div className="smallPadding">
+              <h4>Id of item to delete</h4>
+                <input
+                  type="text"
+                  onChange={e => this.setState({ idToDelete: e.target.value })}
+                />
+            </div>
+
+            <div className = "smallPadding">
+              <button onClick={() => this.deleteFromDB(this.state.idToDelete)}>
+                <h4>DELETE</h4>
+              </button>
+            </div>
         </div>
 
-        <div className="smallPadding">
-          <input
-            type="text"
-            onChange={e => this.setState({ idToUpdate: e.target.value })}
-            placeholder="id of item to update here"
-          />
-          <input
-            type="text"
-            onChange={e => this.setState({ updateToApply: e.target.value })}
-            placeholder="put new value of the item here"
-          />
-          <button
-            onClick={() =>
-              this.updateDB(this.state.idToUpdate, this.state.updateToApply)
-            }
-          >
-            UPDATE
-          </button>
+        <div className="editing">
+            <div className="smallPadding">
+              <h4>Id of item to update</h4>
+                <input
+                  type="text"
+                  onChange={e => this.setState({ idToUpdate: e.target.value })}
+                />
+              <h4>New message</h4>
+                <input
+                  type="text"
+                  onChange={e => this.setState({ updateToApply: e.target.value })}
+                />
+            </div>
+
+            <div className="smallPadding">
+              <button
+                onClick={() =>
+                  this.updateDB(this.state.idToUpdate, this.state.updateToApply)
+                }
+              >
+                <h4>UPDATE</h4>
+              </button>
+            </div>
         </div>
+
       </div>
     )
   }

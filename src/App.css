@@ -1,11 +1,23 @@
 input {
-  width: 200px;
+  width: 250px;
+  border-style: solid;
+}
+
+button {
+  width: 250px;
+  border-style: solid;
+  border-color: gray;
 }
 
 h1{
   font-family: 'Raleway', sans-serif;
   text-align: center;
   font-size: 500%;
+  font-weight: bold;
+}
+
+h2, h3, h4{
+  font-family: 'Raleway', sans-serif;
 }
 
 .smallPadding{
@@ -28,6 +40,22 @@ h1{
 }
 
 .coffeeMug{
+  grid-column: 3/4;
+  display: inline;
+}
+
+.outputBoxEdit{
+  display: grid;
+  grid-template-columns: 300px 100px 300px;
+  padding-left: 50px;
+}
+
+.deleting{
+  grid-column: 1/2;
+  display: inline;
+}
+
+.editing{
   grid-column: 3/4;
   display: inline;
 }

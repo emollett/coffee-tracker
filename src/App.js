@@ -127,8 +127,6 @@ class App extends Component {
         }
       })
 
-      console.log(purchasers);
-
       return (
         <div>
         INPUT COFFEE
@@ -136,7 +134,7 @@ class App extends Component {
             <input
               type="text"
               onChange={e => this.setState({ coffee: e.target.value })}
-              placeholder="add coffee in the database"
+              placeholder="add a coffee to the database"
               style={{ width: "200px" }}
             />
           </div>
@@ -144,7 +142,7 @@ class App extends Component {
             <input
               type="text"
               onChange={e => this.setState({ name: e.target.value })}
-              placeholder="who bought the coffee"
+              placeholder="who bought the coffee?"
               style={{ width: "200px" }}
             />
           </div>
@@ -171,16 +169,7 @@ class App extends Component {
           </div>
 
           COFFEE TRACKER
-          <ul>
-            {purchasers && purchasers.length <= 0
-              ? "NO DB ENTRIES YET"
-              : purchasers.map(purchaser => (
-                  <li style={{ padding: "10px" }}>
-                    <span style={{ color: "gray" }}> name: </span> {purchaser.name} <br />
-                    <span style={{ color: "gray" }}> purchased: </span>{purchaser.purchased}
-                  </li>
-                ))}
-          </ul>
+          <Output purchasers={purchasers} />
 
           ALL ENTRIES
           <ul>

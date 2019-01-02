@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from "axios";
+import './App.css';
 
 class Edit extends Component {
 
@@ -48,10 +49,9 @@ class Edit extends Component {
     return (
 
       <div>
-        <div style={{ padding: "10px" }}>
+        <div className="smallPadding">
           <input
             type="text"
-            style={{ width: "200px" }}
             onChange={e => this.setState({ idToDelete: e.target.value })}
             placeholder="put id of item to delete here"
           />
@@ -60,16 +60,14 @@ class Edit extends Component {
           </button>
         </div>
 
-        <div style={{ padding: "10px" }}>
+        <div className="smallPadding">
           <input
             type="text"
-            style={{ width: "200px" }}
             onChange={e => this.setState({ idToUpdate: e.target.value })}
             placeholder="id of item to update here"
           />
           <input
             type="text"
-            style={{ width: "200px" }}
             onChange={e => this.setState({ updateToApply: e.target.value })}
             placeholder="put new value of the item here"
           />

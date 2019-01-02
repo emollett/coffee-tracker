@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import './App.css';
 class Output extends Component {
   render() {
 
@@ -20,9 +20,9 @@ class Output extends Component {
           {purchasers.length <= 0
             ? "NO DB ENTRIES YET"
             : purchasers.map(purchaser => (
-                <li style={{ padding: "10px" }}>
-                  <span style={{ color: "gray" }}> name: </span> {purchaser.name} <br />
-                  <span style={{ color: "gray" }}> purchased: </span>{purchaser.purchased}
+                <li className="smallPadding">
+                  <span className="output"> name: </span> {purchaser.name} <br />
+                  <span className="output"> purchased: </span>{purchaser.purchased}
                 </li>
               ))}
         </ul>

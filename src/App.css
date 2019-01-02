@@ -1,4 +1,16 @@
-.App {
+input {
+  width: 200px;
+}
+
+.smallPadding{
+  padding: 10px;
+}
+
+.output{
+  color: gray;
+}
+
+/* .App {
   text-align: center;
 }
 
@@ -29,4 +41,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */

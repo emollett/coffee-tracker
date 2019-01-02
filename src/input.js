@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from "axios";
+import './App.css';
 
 class Input extends Component {
 
@@ -33,39 +34,35 @@ class Input extends Component {
   render() {
     return (
       <div>
-        <div style={{ padding: "10px" }}>
+        <div className="smallPadding">
           <input
             type="text"
             onChange={e => this.setState({ coffee: e.target.value })}
             placeholder="add a coffee to the database"
-            style={{ width: "200px" }}
           />
         </div>
-        <div style={{ padding: "10px" }}>
+        <div className="smallPadding">
           <input
             type="text"
             onChange={e => this.setState({ name: e.target.value })}
             placeholder="who bought the coffee?"
-            style={{ width: "200px" }}
           />
         </div>
-        <div style={{ padding: "10px" }}>
+        <div className="smallPadding">
           <input
             type="date"
             onChange={e => this.setState({ date: e.target.value })}
             placeholder="what date was it opened"
-            style={{ width: "200px" }}
           />
         </div>
-        <div style={{ padding: "10px" }}>
+        <div className="smallPadding">
           <input
             type="text"
             onChange={e => this.setState({ message: e.target.value })}
             placeholder="add a note about the coffee"
-            style={{ width: "200px" }}
           />
         </div>
-        <div style={{ padding: "10px" }}>
+        <div className="smallPadding">
           <button onClick={() => this.putDataToDB(this.state.message, this.state.coffee, this.state.name, this.state.date)}>
             ADD
           </button>

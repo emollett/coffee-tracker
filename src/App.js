@@ -3,11 +3,11 @@ import './App.css';
 import Input from './input.js';
 import Output from './output.js';
 import Edit from './edit.js';
+import List from './list.js';
 import axios from "axios";
 
 class App extends Component {
 
-  // initialize our state
     state = {
       data: [],
       intervalIsSet: false,
@@ -25,8 +25,6 @@ class App extends Component {
       }
     }
 
-    // never let a process live forever
-    // always kill a process everytime we are done using it
     componentWillUnmount() {
       if (this.state.intervalIsSet) {
         clearInterval(this.state.intervalIsSet);
@@ -50,22 +48,8 @@ class App extends Component {
     };
 
 
-    // here is our UI
-    // it is easy to understand their functions when you
-    // see them render into our screen
     render() {
       if (!this.state.hasInitialData ) return <h1>Loading...</h1>;
-
-      let purchasers = [];
-      this.state.data.forEach( person => {
-        let purchaser = purchasers.find(purchaser => {return purchaser.name == person.name});
-
-        if (purchaser != undefined) {
-          purchaser.purchased++
-        }else {
-          purchasers.push({name:person.name, purchased: 1})
-        }
-      })
 
       return (
         <div>
@@ -73,22 +57,10 @@ class App extends Component {
           <Input data={this.state.data}/>
 
           COFFEE TRACKER
-          <Output purchasers={purchasers} />
+          <Output data={this.state.data} />
 
           ALL ENTRIES
-          <ul>
-            {this.state.data && this.state.data.length <= 0
-              ? "NO DB ENTRIES YET"
-              : this.state.data.map(dat => (
-                  <li style={{ padding: "10px" }} key={this.state.data.id}>
-                    <span style={{ color: "gray" }}> id: </span> {dat.id} <br />
-                    <span style={{ color: "gray" }}> name: </span>{dat.name} <br />
-                    <span style={{ color: "gray" }}> date: </span>{dat.date} <br />
-                    <span style={{ color: "gray" }}> coffee: </span>{dat.coffee} <br />
-                    <span style={{ color: "gray" }}> note: </span>{dat.message}
-                  </li>
-                ))}
-          </ul>
+          <List data={this.state.data}/>
 
           EDIT ENTRIES
           <Edit data={this.state.data}/>

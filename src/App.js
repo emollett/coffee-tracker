@@ -9,11 +9,11 @@ class App extends Component {
   // initialize our state
     state = {
       data: [],
-      id: 0,
-      message: null,
-      name: null,
-      coffee: null,
-      date: null,
+      // id: 0,
+      // message: null,
+      // name: null,
+      // coffee: null,
+      // date: null,
       intervalIsSet: false,
       idToDelete: null,
       idToUpdate: null,
@@ -56,23 +56,23 @@ class App extends Component {
       });
     };
 
-    // our put method that uses our backend api
-    // to create new query into our data base
-    putDataToDB = (message, coffee, name, date) => {
-      let currentIds = this.state.data.map(data => data.id);
-      let idToBeAdded = 0;
-      while (currentIds.includes(idToBeAdded)) {
-        ++idToBeAdded;
-      }
-
-      axios.post("/api/putData", {
-        id: idToBeAdded,
-        message: message,
-        coffee: coffee,
-        name: name,
-        date: date
-      });
-    };
+    // // our put method that uses our backend api
+    // // to create new query into our data base
+    // putDataToDB = (message, coffee, name, date) => {
+    //   let currentIds = this.state.data.map(data => data.id);
+    //   let idToBeAdded = 0;
+    //   while (currentIds.includes(idToBeAdded)) {
+    //     ++idToBeAdded;
+    //   }
+    //
+    //   axios.post("/api/putData", {
+    //     id: idToBeAdded,
+    //     message: message,
+    //     coffee: coffee,
+    //     name: name,
+    //     date: date
+    //   });
+    // };
 
 
     // our delete method that uses our backend api
@@ -129,44 +129,8 @@ class App extends Component {
 
       return (
         <div>
-        INPUT COFFEE
-          <div style={{ padding: "10px" }}>
-            <input
-              type="text"
-              onChange={e => this.setState({ coffee: e.target.value })}
-              placeholder="add a coffee to the database"
-              style={{ width: "200px" }}
-            />
-          </div>
-          <div style={{ padding: "10px" }}>
-            <input
-              type="text"
-              onChange={e => this.setState({ name: e.target.value })}
-              placeholder="who bought the coffee?"
-              style={{ width: "200px" }}
-            />
-          </div>
-          <div style={{ padding: "10px" }}>
-            <input
-              type="date"
-              onChange={e => this.setState({ date: e.target.value })}
-              placeholder="what date was it opened"
-              style={{ width: "200px" }}
-            />
-          </div>
-          <div style={{ padding: "10px" }}>
-            <input
-              type="text"
-              onChange={e => this.setState({ message: e.target.value })}
-              placeholder="add a note about the coffee"
-              style={{ width: "200px" }}
-            />
-          </div>
-          <div style={{ padding: "10px" }}>
-            <button onClick={() => this.putDataToDB(this.state.message, this.state.coffee, this.state.name, this.state.date)}>
-              ADD
-            </button>
-          </div>
+          INPUT COFFEE
+          <Input data={this.state.data}/>
 
           COFFEE TRACKER
           <Output purchasers={purchasers} />

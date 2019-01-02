@@ -33,7 +33,7 @@ class Input extends Component {
 
   render() {
     return (
-      <div>
+      <div className="bigPadding">
         <div className="smallPadding">
           <input
             type="text"
@@ -63,7 +63,7 @@ class Input extends Component {
           />
         </div>
         <div className="smallPadding">
-          <button onClick={() => this.putDataToDB(this.state.message, this.state.coffee, this.state.name, this.state.date)}>
+          <button onClick={() => this.putDataToDB(this.state.message, this.state.name, this.state.coffee, this.state.date)}>
             ADD
           </button>
         </div>

@@ -2,43 +2,32 @@ input {
   width: 200px;
 }
 
+h1{
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+  font-size: 500%;
+}
+
 .smallPadding{
   padding: 10px;
 }
 
-.output{
-  color: gray;
+.bigPadding{
+  padding: 50px;
 }
 
-/* .App {
-  text-align: center;
+.outputBox{
+  display: grid;
+  grid-template-columns: 100px 20px 200px;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+.coffeeMugName{
+  grid-column: 1/2;
+  display: inline;
+  width: 200px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.coffeeMug{
+  grid-column: 3/4;
+  display: inline;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */

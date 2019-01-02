@@ -53,17 +53,26 @@ class App extends Component {
 
       return (
         <div>
-          INPUT COFFEE
-          <Input data={this.state.data}/>
-
-          COFFEE TRACKER
           <Output data={this.state.data} />
 
-          ALL ENTRIES
-          <List data={this.state.data}/>
+          <ul class="nav nav-tabs nav-justified">
+            <li class="active"><a data-toggle="tab" href="#add"><h3>Add a Coffee</h3></a></li>
+            <li><a data-toggle="tab" href="#seeAll"><h3>See all entries</h3></a></li>
+            <li><a data-toggle="tab" href="#edit"><h3>Edit an entry</h3></a></li>
+          </ul>
 
-          EDIT ENTRIES
-          <Edit data={this.state.data}/>
+          <div class="tab-content">
+            <div id="add" class="tab-pane fade in active">
+              <Input data={this.state.data}/>
+            </div>
+            <div id="seeAll" class="tab-pane fade in active">
+              <List data={this.state.data}/>
+            </div>
+            <div id="edit" class="tab-pane fade in active">
+              <Edit data={this.state.data}/>
+            </div>
+          </div>
+
         </div>
       );
     }

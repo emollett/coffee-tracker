@@ -1,6 +1,12 @@
-input {
+input:valid {
   width: 250px;
   border-style: solid;
+}
+
+input:invalid {
+  width: 250px;
+  border-style: solid;
+  border-color: red;
 }
 
 button {

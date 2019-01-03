@@ -66,7 +66,7 @@ router.post("/putData", (req, res) => {
 
   const { id, message, coffee, name, date } = req.body;
 
-  if ((!id && id !== 0) || (!coffee && !name) {
+  if ((!id && id !== 0) || !name || !coffee ) {
     return res.json({
       success: false,
       error: "INVALID INPUTS"

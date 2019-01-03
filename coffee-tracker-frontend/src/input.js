@@ -39,6 +39,7 @@ class Input extends Component {
         <h4>Add a coffee to the database</h4>
           <input
             type="text"
+            required
             onChange={e => this.setState({ coffee: e.target.value })}
           />
         </div>
@@ -48,6 +49,7 @@ class Input extends Component {
           <input
             type="text"
             autoComplete="on"
+            required
             onChange={e => this.setState({ name: e.target.value })}
           />
         </div>

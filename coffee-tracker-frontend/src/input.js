@@ -47,6 +47,7 @@ class Input extends Component {
         <h4>Who bought the coffee?</h4>
           <input
             type="text"
+            autoComplete="on"
             onChange={e => this.setState({ name: e.target.value })}
           />
         </div>

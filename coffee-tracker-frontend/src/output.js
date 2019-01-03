@@ -6,9 +6,9 @@ class Output extends Component {
 
     let purchasers = [];
     this.props.data.forEach( person => {
-      let purchaser = purchasers.find(purchaser => {return purchaser.name == person.name});
+      let purchaser = purchasers.find(purchaser => {return purchaser.name === person.name});
 
-      if (purchaser != undefined) {
+      if (purchaser !== undefined) {
         purchaser.purchased++
       }else {
         purchasers.push({name:person.name, purchased: 1})

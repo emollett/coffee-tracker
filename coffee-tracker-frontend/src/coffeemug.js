@@ -11,7 +11,7 @@ class Coffeemug extends Component {
     return (
       <ul className="coffeeMug">
         {coffeeMugs.map(purchased => (
-                <img src="./coffee.ico" width="50" height="50"></img>
+                <img src="./coffee.ico" alt="icon of a coffee mug" width="50" height="50"></img>
             ))}
       </ul>
 

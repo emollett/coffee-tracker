@@ -19,3 +19,8 @@ You will also see any lint errors in the console.
 
 I used a couple of sources to help me create this, this post gave me the basic structure for the app, and helped me get it storing and retrieving the data. I ended up pulling it apart into different components, but it was a very handy starting point.<br>
 https://medium.com/javascript-in-plain-english/full-stack-mongodb-react-node-js-express-js-in-one-simple-app-6cc8ed6de274
+
+## Notes
+
+You need mongo installed to run this
+https://docs.mongodb.com/manual/installation/

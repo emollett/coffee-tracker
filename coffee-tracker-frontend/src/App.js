@@ -4,7 +4,6 @@ import Input from './input.js';
 import Output from './output.js';
 import Edit from './edit.js';
 import List from './list.js';
-import axios from "axios";
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
 class App extends Component {
@@ -21,7 +20,7 @@ class App extends Component {
     componentDidMount() {
       this.getDataFromDb();
       if (!this.state.intervalIsSet) {
-        let interval = setInterval(this.getDataFromDb, 1000);
+        let interval = setInterval(this.getDataFromDb, 10000);
         this.setState({ intervalIsSet: interval});
       }
     }

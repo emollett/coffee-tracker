@@ -16,7 +16,7 @@ class Edit extends Component {
     deleteFromDB = idTodelete => {
       let objIdToDelete = null;
       this.props.data.forEach(dat => {
-        if (dat.id == idTodelete) {
+        if (dat.id === idTodelete) {
           objIdToDelete = dat._id;
         }
       });
@@ -34,7 +34,7 @@ class Edit extends Component {
     updateDB = (idToUpdate, updateToApply) => {
       let objIdToUpdate = null;
       this.props.data.forEach(dat => {
-        if (dat.id == idToUpdate) {
+        if (dat.id === idToUpdate) {
           objIdToUpdate = dat._id;
         }
       });

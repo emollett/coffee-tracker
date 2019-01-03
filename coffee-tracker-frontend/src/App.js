@@ -5,6 +5,7 @@ import Output from './output.js';
 import Edit from './edit.js';
 import List from './list.js';
 import axios from "axios";
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
 class App extends Component {
 
@@ -55,23 +56,25 @@ class App extends Component {
         <div>
           <Output data={this.state.data} />
 
-          <ul class="nav nav-tabs nav-justified">
-            <li class="active"><a data-toggle="tab" href="#add"><h3>Add a Coffee</h3></a></li>
-            <li><a data-toggle="tab" href="#seeAll"><h3>See all entries</h3></a></li>
-            <li><a data-toggle="tab" href="#edit"><h3>Edit an entry</h3></a></li>
-          </ul>
 
-          <div class="tab-content">
-            <div id="add" class="tab-pane fade in active">
-              <Input data={this.state.data}/>
-            </div>
-            <div id="seeAll" class="tab-pane fade in active">
-              <List data={this.state.data}/>
-            </div>
-            <div id="edit" class="tab-pane fade in active">
-              <Edit data={this.state.data}/>
-            </div>
-          </div>
+            <Tabs>
+              <TabList>
+                <Tab><h3>Add a coffee</h3></Tab>
+                <Tab><h3>See all entries</h3></Tab>
+                <Tab><h3>Edit an entry</h3></Tab>
+              </TabList>
+
+              <TabPanel>
+                <Input data={this.state.data}/>
+              </TabPanel>
+              <TabPanel>
+                <List data={this.state.data}/>
+              </TabPanel>
+              <TabPanel>
+                <Edit data={this.state.data}/>
+              </TabPanel>
+            </Tabs>
+
 
         </div>
       );

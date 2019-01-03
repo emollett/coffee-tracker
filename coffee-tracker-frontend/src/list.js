@@ -9,7 +9,7 @@ class List extends Component {
   render() {
     return (
 
-      <div>
+      <div className="smallPadding">
         <ul>
           {this.props.data && this.props.data.length <= 0
             ? "NO DB ENTRIES YET"

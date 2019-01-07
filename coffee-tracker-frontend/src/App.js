@@ -5,6 +5,7 @@ import Output from './output.js';
 import Edit from './edit.js';
 import List from './list.js';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import io from 'socket.io-client';
 
 class App extends Component {
 
@@ -14,23 +15,44 @@ class App extends Component {
       hasInitialData: false,
     };
 
+	  socket = io.connect("http://127.0.0.1:3001");
+
     // when component mounts, first thing it does is fetch all existing data in our db
     // then we incorporate a polling logic so that we can easily see if our db has
     // changed and implement those changes into our UI
     componentDidMount() {
+      // console.log(socket);
       this.getDataFromDb();
-      if (!this.state.intervalIsSet) {
-        let interval = setInterval(this.getDataFromDb, 1000);
-        this.setState({ intervalIsSet: interval});
-      }
-    }
+				this.socket.on("NewData", ()=>{
+					console.log('received from server!');
+				});
+      // socket.on("NewData", this.getDataFromDb);
+        // this.setState({ intervalIsSet: interval});
+        // socket.on("Delete", function() {
+        //   this.getDataFromDb();
+        //   // this.setState({ intervalIsSet: interval});
+        // });
+        // socket.on("Update", function() {
+        //   this.getDataFromDb();
+        //   // this.setState({ intervalIsSet: interval});
+        // });
+      };
 
-    componentWillUnmount() {
-      if (this.state.intervalIsSet) {
-        clearInterval(this.state.intervalIsSet);
-        this.setState({ intervalIsSet: null });
-      }
-    }
+
+    // componentDidMount() {
+    //   this.getDataFromDb();
+    //   if (!this.state.intervalIsSet) {
+    //     let interval = setInterval(this.getDataFromDb, 1000);
+    //     this.setState({ intervalIsSet: interval});
+    //   }
+    // }
+    //
+    // componentWillUnmount() {
+    //   if (this.state.intervalIsSet) {
+    //     clearInterval(this.state.intervalIsSet);
+    //     this.setState({ intervalIsSet: null });
+    //   }
+    // }
 
     // just a note, here, in the front end, we use the id key of our data object
     // in order to identify which we want to Update or delete.
@@ -44,15 +66,17 @@ class App extends Component {
         .then(data => data.json())
         .then(res => {
           this.setState({ data: res.data, hasInitialData:true })
-      });
+        });
     };
-
 
     render() {
       if (!this.state.hasInitialData ) return <h1>Loading...</h1>;
 
       return (
         <div>
+
+        <button onClick={()=>{this.socket.emit("coffee")}}>hey</button>
+
           <Output data={this.state.data} />
 
 

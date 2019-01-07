@@ -4,7 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "concurrently \"cd coffee-tracker-backend && node server.js\" \"cd coffee-tracker-frontend && npm start\""
+    "start": "concurrently \"node coffee-tracker-backend/server.js\" \"npm run react-start\"",
+    "react-start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
   "repository": {
     "type": "git",
@@ -18,6 +22,25 @@
   },
   "homepage": "https://github.com/emollett/coffee-tracker#readme",
   "dependencies": {
-    "concurrently": "^4.1.0"
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
+    "concurrently": "^4.1.0",
+    "express": "^4.16.4",
+    "mongoose": "^5.3.16",
+    "morgan": "^1.9.1",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "react-scripts": "2.1.1",
+    "react-tabs": "^2.3.0"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "proxy": "http://localhost:3001",
+  "eslintConfig": {
+    "extends": "react-app"
   }
 }

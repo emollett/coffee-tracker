@@ -16,8 +16,7 @@ class Input extends Component {
     // our put method that uses our backend api
     // to create new query into our data base
     putDataToDB = (message, name, coffee, date, event) => {
-      event.preventDefault(); // this will stop the page from refreshing
-      debugger;
+      event.preventDefault(); // stop the page from refreshing
       let currentIds = this.props.data.map(data => data.id);
       let idToBeAdded = 0;
       while (currentIds.includes(idToBeAdded)) {

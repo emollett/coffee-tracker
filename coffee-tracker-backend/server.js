@@ -14,15 +14,14 @@ const io = require("socket.io")(server);
 server.listen(3001);
 // WARNING: app.listen(80) will NOT work here!
 
-io.on('connection', function (socket) {
+io.on("connection", function (socket) {
   console.log("client connected");
-  setTimeout(()=>{
-    socket.emit('news', { hello: 'world' });
-  }, 5000);
-
-  // socket.on('my other event', function (data) {
-  //   console.log(data);
-  // });
+	setTimeout(()=>{
+  	socket.emit("NewData");
+	}, 4000);
+  socket.on("coffee", function(){
+    console.log('received from client!')
+  });
 });
 
 // this is our MongoDB database

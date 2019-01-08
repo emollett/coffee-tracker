@@ -12,13 +12,11 @@ const socket = io.connect("http://127.0.0.1:3001");
 class App extends Component {
 
 
-
     state = {
       data: [],
       intervalIsSet: false,
       hasInitialData: false,
     };
-
 
 
     // when component mounts, first thing it does is fetch all existing data in our db
@@ -27,36 +25,8 @@ class App extends Component {
     componentDidMount() {
       this.getDataFromDb();
       socket.on("NewData", this.getDataFromDb);
-
-      // socket.on("NewData", this.getDataFromDb);
-
-
-        // this.setState({ intervalIsSet: interval});
-        // socket.on("Delete", function() {
-        //   this.getDataFromDb();
-        //   // this.setState({ intervalIsSet: interval});
-        // });
-        // socket.on("Update", function() {
-        //   this.getDataFromDb();
-        //   // this.setState({ intervalIsSet: interval});
-        // });
       };
 
-
-    // componentDidMount() {
-    //   this.getDataFromDb();
-    //   if (!this.state.intervalIsSet) {
-    //     let interval = setInterval(this.getDataFromDb, 1000);
-    //     this.setState({ intervalIsSet: interval});
-    //   }
-    // }
-    //
-    // componentWillUnmount() {
-    //   if (this.state.intervalIsSet) {
-    //     clearInterval(this.state.intervalIsSet);
-    //     this.setState({ intervalIsSet: null });
-    //   }
-    // }
 
     // just a note, here, in the front end, we use the id key of our data object
     // in order to identify which we want to Update or delete.
@@ -73,11 +43,6 @@ class App extends Component {
         });
     };
 
-    // sayHello = () => {
-    //
-    // }
-
-
 
     render() {
       if (!this.state.hasInitialData ) return <h1>Loading...</h1>;
@@ -85,10 +50,7 @@ class App extends Component {
       return (
         <div>
 
-        <button onClick={()=>{socket.emit("coffee")}}>hey</button>
-
           <Output data={this.state.data} />
-
 
             <Tabs>
               <TabList>

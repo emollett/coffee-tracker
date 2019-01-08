@@ -19,9 +19,6 @@ io.on("connection", function (socket) {
 	setTimeout(()=>{
   	socket.emit("NewData");
 	}, 4000);
-  socket.on("coffee", function(){
-    console.log('received from client!')
-  });
 });
 
 // this is our MongoDB database
@@ -61,7 +58,7 @@ router.post("/updateData", (req, res) => {
   const { id, update } = req.body;
   Data.findByIdAndUpdate(id, update, err => {
     if (err) return res.json({ success: false, error: err });
-    io.emit( "Update", req.body);
+    io.emit( "NewData" );
     return res.json({ success: true });
   });
 });
@@ -72,7 +69,7 @@ router.delete("/deleteData", (req, res) => {
   const { id } = req.body;
   Data.findByIdAndDelete(id, err => {
     if (err) return res.send(err);
-    io.emit( "Delete", req.body);
+    io.emit( "NewData" );
     return res.json({ success: true });
   });
 });

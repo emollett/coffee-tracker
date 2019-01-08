@@ -8,6 +8,19 @@ const API_PORT = 3001;
 const app = express();
 const router = express.Router();
 
+const server = require("http").Server(app);
+const io = require("socket.io")(server);
+
+server.listen(3001);
+// WARNING: app.listen(80) will NOT work here!
+
+io.on("connection", function (socket) {
+  console.log("client connected");
+	setTimeout(()=>{
+  	socket.emit("NewData");
+	}, 4000);
+});
+
 // this is our MongoDB database
 const dbRoute = "mongodb://localhost:27017/test";
 
@@ -45,6 +58,7 @@ router.post("/updateData", (req, res) => {
   const { id, update } = req.body;
   Data.findByIdAndUpdate(id, update, err => {
     if (err) return res.json({ success: false, error: err });
+    io.emit( "NewData" );
     return res.json({ success: true });
   });
 });
@@ -55,6 +69,7 @@ router.delete("/deleteData", (req, res) => {
   const { id } = req.body;
   Data.findByIdAndDelete(id, err => {
     if (err) return res.send(err);
+    io.emit( "NewData" );
     return res.json({ success: true });
   });
 });
@@ -79,6 +94,7 @@ router.post("/putData", (req, res) => {
   data.name = name;
   data.save(err => {
     if (err) return res.json({ success: false, error: err });
+    io.emit( "NewData" );
     return res.json({ success: true });
   });
 });
@@ -86,5 +102,10 @@ router.post("/putData", (req, res) => {
 // append /api for our http requests
 app.use("/api/", router);
 
-// launch our backend into a port
-app.listen(API_PORT, () => console.log(`LISTENING ON PORT ${API_PORT}`));
+// // launch our backend into a port
+// var server = app.listen(API_PORT, () => console.log(`LISTENING ON PORT ${API_PORT}`));
+// const io = socketIo(server);
+// io.set('origins', 'http://localhost:3000');
+// io.on("connection", () =>{
+//  console.log("a user is connected")
+// })

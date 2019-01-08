@@ -21,9 +21,9 @@ class Output extends Component {
           {purchasers.length <= 0
             ? "NO DB ENTRIES YET"
             : purchasers.map(purchaser => (
-                <div className="outputBox">
+                <div className="outputBox" key={purchaser.name}>
                   <h2 className="coffeeMugName">{purchaser.name}:</h2>
-                  <Coffeemug purchased={purchaser.purchased} />
+                  <Coffeemug purchased={purchaser.purchased} name={purchaser.name} />
                 </div>
               ))}
         </ul>

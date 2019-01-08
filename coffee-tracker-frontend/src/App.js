@@ -7,10 +7,9 @@ import List from './list.js';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import io from 'socket.io-client';
 
-const socket = io.connect("http://127.0.0.1:3001");
+
 
 class App extends Component {
-
 
     state = {
       data: [],
@@ -18,15 +17,16 @@ class App extends Component {
       hasInitialData: false,
     };
 
+    socket;
 
     // when component mounts, first thing it does is fetch all existing data in our db
     // then we incorporate a polling logic so that we can easily see if our db has
     // changed and implement those changes into our UI
     componentDidMount() {
       this.getDataFromDb();
-      socket.on("NewData", this.getDataFromDb);
-      };
-
+      this.socket = io.connect("http://127.0.0.1:3001");
+      this.socket.on("NewData", this.getDataFromDb);
+    };
 
     // just a note, here, in the front end, we use the id key of our data object
     // in order to identify which we want to Update or delete.

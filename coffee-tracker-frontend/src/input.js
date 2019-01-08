@@ -15,7 +15,10 @@ class Input extends Component {
 
     // our put method that uses our backend api
     // to create new query into our data base
-    putDataToDB = (message, name, coffee, date) => {
+    putDataToDB = (message, name, coffee, date, event) => {
+      
+      event.preventDefault(); // stop the page from refreshing
+
       let currentIds = this.props.data.map(data => data.id);
       let idToBeAdded = 0;
       while (currentIds.includes(idToBeAdded)) {
@@ -71,7 +74,9 @@ class Input extends Component {
         </div>
 
         <div className="smallPadding">
-          <button onClick={() => this.putDataToDB(this.state.message, this.state.name, this.state.coffee, this.state.date)}>
+
+          <button onClick={(event) => this.putDataToDB(this.state.message, this.state.name, this.state.coffee, this.state.date, event)}>
+
             <h4>Add to database</h4>
           </button>
         </div>

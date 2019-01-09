@@ -16,8 +16,13 @@ class Input extends Component {
     // our put method that uses our backend api
     // to create new query into our data base
     putDataToDB = (message, name, coffee, date, event) => {
-      
+
       event.preventDefault(); // stop the page from refreshing
+
+      // just a note, here, in the front end, we use the id key of our data object
+      // in order to identify which we want to Update or delete.
+      // for our back end, we use the object id assigned by MongoDB to modify
+      // data base entries
 
       let currentIds = this.props.data.map(data => data.id);
       let idToBeAdded = 0;

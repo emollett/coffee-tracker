@@ -25,13 +25,11 @@ class App extends Component {
     componentDidMount() {
       this.getDataFromDb();
       this.socket = io.connect("http://127.0.0.1:3001");
+      //this is where we are listening for the socket.io message sent from the server, which tells us to go and get the data again if something has changed.
       this.socket.on("NewData", this.getDataFromDb);
     };
 
-    // just a note, here, in the front end, we use the id key of our data object
-    // in order to identify which we want to Update or delete.
-    // for our back end, we use the object id assigned by MongoDB to modify
-    // data base entries
+
 
     // our first get method that uses our backend api to
     // fetch data from our data base

@@ -9,4 +9,6 @@ cd ..;
 cp -R coffee-tracker-frontend/build/ coffee-tracker-backend;
 cd coffee-tracker-backend;
 npm install; # install in case any new back end deps have been included since last install
+sudo service mongod stop;
+sudo service mongod start;
 node server;

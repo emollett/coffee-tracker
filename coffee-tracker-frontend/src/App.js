@@ -24,7 +24,7 @@ class App extends Component {
     // changed and implement those changes into our UI
     componentDidMount() {
       this.getDataFromDb();
-      this.socket = io.connect("http://127.0.0.1:80");
+      this.socket = io.connect();
       //this is where we are listening for the socket.io message sent from the server, which tells us to go and get the data again if something has changed.
       this.socket.on("NewData", this.getDataFromDb);
     };

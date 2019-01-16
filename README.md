@@ -15,6 +15,9 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br>
 You will also see any lint errors in the console.
 
+## Deployment
+I have deployed this using an EC2 micro. Once you have this set up, and node and mongo installed, and the project cloned, you can use run.sh to build the project and then deploy it.
+
 ##
 
 I used a couple of sources to help me create this, this post gave me the basic structure for the app, and helped me get it storing and retrieving the data. I ended up pulling it apart into different components, but it was a very handy starting point.<br>

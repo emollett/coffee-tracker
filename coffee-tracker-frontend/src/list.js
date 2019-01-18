@@ -1,27 +1,47 @@
 import React, { Component } from 'react';
+import Moment from 'react-moment';
 import './App.css';
 
 class List extends Component {
 
-
-
   render() {
-    return (
 
+    if (this.props.data && this.props.data.length < 1) return <p>No coffee entered yet</p>;
+
+    return (
       <div className="smallPadding">
-        <ul>
-          {this.props.data && this.props.data.length <= 0
-            ? "NO DB ENTRIES YET"
-            : this.props.data.map(dat => (
-                <div className="smallPadding" key={dat.id}>
-                  <span className="output"> id: </span> {dat.id} <br />
-                  <span className="output"> name: </span>{dat.name} <br />
-                  <span className="output"> date: </span>{dat.date} <br />
-                  <span className="output"> coffee: </span>{dat.coffee} <br />
-                  <span className="output"> note: </span>{dat.message}
-                </div>
-              ))}
-        </ul>
+        <table className="table">
+          <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Date</th>
+            <th>Coffee</th>
+            <th>Note</th>
+          </tr>
+          </thead>
+          <tbody>
+					{this.props.data.map(data => (
+          <tr key={data.id}>
+            <td>
+							{data.id}
+            </td>
+            <td>
+							{data.name}
+            </td>
+            <td>
+							<Moment format="DD/MM/YYYY">{data.date}</Moment>
+            </td>
+            <td>
+							{data.coffee}
+            </td>
+            <td>
+							{data.message}
+            </td>
+          </tr>
+					))}
+          </tbody>
+        </table>
       </div>
     )
   }

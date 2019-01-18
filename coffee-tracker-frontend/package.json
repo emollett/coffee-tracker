@@ -4,9 +4,11 @@
   "private": true,
   "dependencies": {
     "axios": "^0.18.0",
+    "moment": "^2.23.0",
     "mongoose": "^5.3.16",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
+    "react-moment": "^0.8.4",
     "react-scripts": "2.1.1",
     "react-tabs": "^2.3.0",
     "socket.io-client": "^2.2.0"

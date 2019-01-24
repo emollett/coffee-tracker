@@ -4,14 +4,14 @@ const bodyParser = require("body-parser");
 const logger = require("morgan");
 const Data = require("./data");
 
-const API_PORT = 80;
+const API_PORT = 3001;
 const app = express();
 const router = express.Router();
 
 const server = require("http").Server(app);
 const io = require("socket.io")(server);
 
-server.listen(80);
+server.listen(3001);
 // WARNING: app.listen(80) will NOT work here!
 
 //We are using socket.io to send messages that trigger the data to be updated on the client. See below for the emits on various events happening
@@ -84,7 +84,7 @@ router.delete("/deleteData", (req, res) => {
 router.post("/putData", (req, res) => {
   let data = new Data();
 
-  const { id, message, coffee, name, date } = req.body;
+  const { id, message, coffee, name, dateOpened, datePurchased } = req.body;
 
   if ((!id && id !== 0) || !name || !coffee ) {
     return res.json({
@@ -95,7 +95,8 @@ router.post("/putData", (req, res) => {
   data.message = message;
   data.id = id;
   data.coffee = coffee;
-  data.date = date;
+  data.dateOpened = dateOpened;
+  data.datePurchased = datePurchased;
   data.name = name;
   data.save(err => {
     if (err) return res.json({ success: false, error: err });

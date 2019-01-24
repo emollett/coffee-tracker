@@ -8,7 +8,8 @@ const DataSchema = new Schema(
     id: Number,
     name: String,
     coffee: String,
-    date: Date,
+    dateOpened: Date,
+    datePurchased: Date,
     message: String
   },
   { timestamps: true }

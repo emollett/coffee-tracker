@@ -15,7 +15,8 @@ class List extends Component {
           <tr>
             <th>ID</th>
             <th>Name</th>
-            <th>Date</th>
+            <th>Date Purchased</th>
+            <th>Date Opened</th>
             <th>Coffee</th>
             <th>Note</th>
           </tr>
@@ -30,7 +31,10 @@ class List extends Component {
 							{data.name}
             </td>
             <td>
-							<Moment format="DD/MM/YYYY">{data.date}</Moment>
+							<Moment format="DD/MM/YYYY">{data.datePurchased}</Moment>
+            </td>
+            <td>
+              <Moment format="DD/MM/YYYY">{data.dateOpened}</Moment>
             </td>
             <td>
 							{data.coffee}

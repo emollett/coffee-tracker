@@ -31,7 +31,7 @@ class Edit extends Component {
 
     // our update method that uses our backend api
     // to overwrite existing data base information
-    updateDB = (idToUpdate, updateToApply) => {
+    updateDB = (idToUpdate, updateToApply, updateToDate) => {
       let objIdToUpdate = null;
       this.props.data.forEach(dat => {
         if (dat.id == idToUpdate) {
@@ -41,7 +41,9 @@ class Edit extends Component {
 
       axios.post("/api/updateData", {
         id: objIdToUpdate,
-        update: { message: updateToApply }
+        update: {
+          message: updateToApply,
+          dateOpened: updateToDate}
       });
     };
 
@@ -78,12 +80,17 @@ class Edit extends Component {
                   type="text"
                   onChange={e => this.setState({ updateToApply: e.target.value })}
                 />
+              <h4>New opened date</h4>
+                <input
+                  type="date"
+                  onChange={e => this.setState({ updateToDate: e.target.value })}
+                />
             </div>
 
             <div className="smallPadding">
               <button
                 onClick={() =>
-                  this.updateDB(this.state.idToUpdate, this.state.updateToApply)
+                  this.updateDB(this.state.idToUpdate, this.state.updateToApply, this.state.updateToDate)
                 }
               >
                 <h4>UPDATE</h4>

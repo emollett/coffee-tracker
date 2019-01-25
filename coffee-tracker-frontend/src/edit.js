@@ -43,7 +43,7 @@ class Edit extends Component {
         id: objIdToUpdate,
         update: {
           message: updateToApply,
-          dateOpened: updateToDate}
+          date: updateToDate}
       });
     };
 

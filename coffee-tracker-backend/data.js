@@ -8,7 +8,7 @@ const DataSchema = new Schema(
     id: Number,
     name: String,
     coffee: String,
-    dateOpened: Date,
+    date: Date,
     datePurchased: Date,
     message: String
   },

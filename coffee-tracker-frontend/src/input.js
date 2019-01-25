@@ -11,12 +11,12 @@ class Input extends Component {
       name: null,
       coffee: null,
       datePurchased: null,
-      dateOpened: null,
+      date: null,
     };
 
     // our put method that uses our backend api
     // to create new query into our data base
-    putDataToDB = (message, name, coffee, dateOpened, datePurchased, event) => {
+    putDataToDB = (message, name, coffee, date, datePurchased, event) => {
 
       event.preventDefault(); // stop the page from refreshing
 
@@ -36,7 +36,7 @@ class Input extends Component {
         message: message,
         name: name,
         coffee: coffee,
-        dateOpened: dateOpened,
+        date: date,
         datePurchased: datePurchased,
       });
     };
@@ -76,7 +76,7 @@ class Input extends Component {
         <h4>What date was it opened?</h4>
           <input
             type="date"
-            onChange={e => this.setState({ dateOpened: e.target.value })}
+            onChange={e => this.setState({ date: e.target.value })}
           />
         </div>
 
@@ -90,7 +90,7 @@ class Input extends Component {
 
         <div className="smallPadding">
 
-          <button onClick={(event) => this.putDataToDB(this.state.message, this.state.name, this.state.coffee, this.state.dateOpened, this.state.datePurchased, event)}>
+          <button onClick={(event) => this.putDataToDB(this.state.message, this.state.name, this.state.coffee, this.state.date, this.state.datePurchased, event)}>
 
             <h4>Add to database</h4>
           </button>

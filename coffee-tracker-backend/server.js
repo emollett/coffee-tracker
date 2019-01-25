@@ -84,7 +84,7 @@ router.delete("/deleteData", (req, res) => {
 router.post("/putData", (req, res) => {
   let data = new Data();
 
-  const { id, message, coffee, name, dateOpened, datePurchased } = req.body;
+  const { id, message, coffee, name, date, datePurchased } = req.body;
 
   if ((!id && id !== 0) || !name || !coffee ) {
     return res.json({
@@ -95,7 +95,7 @@ router.post("/putData", (req, res) => {
   data.message = message;
   data.id = id;
   data.coffee = coffee;
-  data.dateOpened = dateOpened;
+  data.date = date;
   data.datePurchased = datePurchased;
   data.name = name;
   data.save(err => {

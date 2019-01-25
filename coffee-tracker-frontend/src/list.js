@@ -31,20 +31,18 @@ class List extends Component {
 							{data.name}
             </td>
             <td>
-              {(() => {
-                switch (data.datePurchased) {
-                  case null:   return <p>No data</p>;
-                  default:      return <Moment format="DD/MM/YYYY">{data.datePurchased}</Moment>;
-                }
-              })()}
+              {
+                ((typeof(data.datePurchased) === 'undefined') || (data.datePurchased === null))
+                  ? <p>No data</p>
+                  : <Moment format="DD/MM/YYYY">{data.datePurchased}</Moment>
+              }
             </td>
             <td>
-              {(() => {
-                switch (data.date) {
-                  case null:   return <p>No data</p>;
-                  default:      return <Moment format="DD/MM/YYYY">{data.date}</Moment>;
-                }
-              })()}
+              {
+                ((typeof(data.date) === 'undefined') || (data.date === null))
+                  ? <p>No data</p>
+                  : <Moment format="DD/MM/YYYY">{data.date}</Moment>
+              }
             </td>
             <td>
 							{data.coffee}

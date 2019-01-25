@@ -31,10 +31,20 @@ class List extends Component {
 							{data.name}
             </td>
             <td>
-							<Moment format="DD/MM/YYYY">{data.datePurchased}</Moment>
+              {(() => {
+                switch (data.datePurchased) {
+                  case null:   return <p>No data</p>;
+                  default:      return <Moment format="DD/MM/YYYY">{data.datePurchased}</Moment>;
+                }
+              })()}
             </td>
             <td>
-              <Moment format="DD/MM/YYYY">{data.dateOpened}</Moment>
+              {(() => {
+                switch (data.date) {
+                  case null:   return <p>No data</p>;
+                  default:      return <Moment format="DD/MM/YYYY">{data.date}</Moment>;
+                }
+              })()}
             </td>
             <td>
 							{data.coffee}

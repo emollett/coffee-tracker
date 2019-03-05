@@ -1,12 +1,10 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
+import ReactDOM from 'react-dom';
+import {Route, withRouter, Switch} from 'react-router-dom';
 import './App.css';
-import Input from './input.js';
 import Output from './output.js';
-import Edit from './edit.js';
-import List from './list.js';
-import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import Admin from './admin.js';
 import io from 'socket.io-client';
-
 
 
 class App extends Component {
@@ -24,11 +22,10 @@ class App extends Component {
     // changed and implement those changes into our UI
     componentDidMount() {
       this.getDataFromDb();
-      this.socket = io.connect();
+      this.socket = io.connect("http://127.0.0.1:3001");
       //this is where we are listening for the socket.io message sent from the server, which tells us to go and get the data again if something has changed.
       this.socket.on("NewData", this.getDataFromDb);
     };
-
 
 
     // our first get method that uses our backend api to
@@ -46,32 +43,16 @@ class App extends Component {
       if (!this.state.hasInitialData ) return <h1>Loading...</h1>;
 
       return (
-        <div>
-
-          <Output data={this.state.data} />
-
-            <Tabs>
-              <TabList>
-                <Tab><h3>Add a coffee</h3></Tab>
-                <Tab><h3>See all entries</h3></Tab>
-                <Tab><h3>Edit an entry</h3></Tab>
-              </TabList>
-
-              <TabPanel>
-                <Input data={this.state.data}/>
-              </TabPanel>
-              <TabPanel>
-                <List data={this.state.data}/>
-              </TabPanel>
-              <TabPanel>
-                <Edit data={this.state.data}/>
-              </TabPanel>
-            </Tabs>
-
-
-        </div>
+        <Switch>
+          <Route exact path="/" >
+            <Output data={this.state.data}/>
+          </Route>
+          <Route exact path="/admin" >
+            <Admin data={this.state.data}/>
+          </Route>
+        </Switch>
       );
     }
   }
 
-export default App;
+export default withRouter(App);

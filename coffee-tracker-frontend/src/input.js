@@ -14,6 +14,8 @@ class Input extends Component {
       date: null,
     };
 
+
+
     // our put method that uses our backend api
     // to create new query into our data base
     putDataToDB = (message, name, coffee, date, datePurchased, event) => {

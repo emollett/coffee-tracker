@@ -11,7 +11,8 @@ class List extends Component {
     this.reversed = this.props.data.reverse();
 
     return (
-      <div className="smallPadding">
+      <div className="bigPadding">
+        <div className="smallPadding">
         <table className="table">
           <thead>
           <tr>
@@ -56,6 +57,7 @@ class List extends Component {
 					))}
           </tbody>
         </table>
+        </div>
       </div>
     )
   }

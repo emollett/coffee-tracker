@@ -43,14 +43,9 @@ class App extends Component {
       if (!this.state.hasInitialData ) return <h1>Loading...</h1>;
 
       return (
-        <Switch>
-          <Route exact path="/" >
+
             <Output data={this.state.data}/>
-          </Route>
-          <Route exact path="/admin" >
-            <Admin data={this.state.data}/>
-          </Route>
-        </Switch>
+
       );
     }
   }

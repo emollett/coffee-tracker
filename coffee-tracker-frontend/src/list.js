@@ -8,6 +8,8 @@ class List extends Component {
 
     if (this.props.data && this.props.data.length < 1) return <p>No coffee entered yet</p>;
 
+    this.reversed = this.props.data.reverse();
+
     return (
       <div className="smallPadding">
         <table className="table">
@@ -15,13 +17,14 @@ class List extends Component {
           <tr>
             <th>ID</th>
             <th>Name</th>
-            <th>Date</th>
+            <th>Date Purchased</th>
+            <th>Date Opened</th>
             <th>Coffee</th>
             <th>Note</th>
           </tr>
           </thead>
           <tbody>
-					{this.props.data.map(data => (
+					{this.reversed.map(data => (
           <tr key={data.id}>
             <td>
 							{data.id}
@@ -30,7 +33,18 @@ class List extends Component {
 							{data.name}
             </td>
             <td>
-							<Moment format="DD/MM/YYYY">{data.date}</Moment>
+              {
+                ((typeof(data.datePurchased) === 'undefined') || (data.datePurchased === null))
+                  ? <p>No data</p>
+                  : <Moment format="DD/MM/YYYY">{data.datePurchased}</Moment>
+              }
+            </td>
+            <td>
+              {
+                ((typeof(data.date) === 'undefined') || (data.date === null))
+                  ? <p>No data</p>
+                  : <Moment format="DD/MM/YYYY">{data.date}</Moment>
+              }
             </td>
             <td>
 							{data.coffee}

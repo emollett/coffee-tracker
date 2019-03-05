@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import { render } from "react-dom";
-import { Router, Link } from "@reach/router";
+import React, { Component, Fragment } from 'react';
+import ReactDOM from 'react-dom';
+import {Route, withRouter, Switch} from 'react-router-dom';
 import './App.css';
 import Output from './output.js';
 import Admin from './admin.js';
@@ -43,14 +43,16 @@ class App extends Component {
       if (!this.state.hasInitialData ) return <h1>Loading...</h1>;
 
       return (
-
-          <Router>
-            <Output path="/" data={this.state.data}/>
-            <Admin path="admin" data={this.state.data} />
-          </Router>
-
+        <Switch>
+          <Route exact path="/" >
+            <Output data={this.state.data}/>
+          </Route>
+          <Route exact path="/admin" >
+            <Admin data={this.state.data}/>
+          </Route>
+        </Switch>
       );
     }
   }
 
-export default App;
+export default withRouter(App);

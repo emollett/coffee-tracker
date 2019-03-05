@@ -4,15 +4,13 @@ import Input from './input.js';
 import Edit from './edit.js';
 import List from './list.js';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import io from 'socket.io-client';
 
+import {Route, Link, withRouter} from 'react-router-dom';
 
 
 class Admin extends Component {
 
-
     render() {
-
 
       return (
         <div>
@@ -36,9 +34,11 @@ class Admin extends Component {
             </Tabs>
 
 
+
+
         </div>
       );
     }
   }
 
-export default Admin;
+export default withRouter(Admin);

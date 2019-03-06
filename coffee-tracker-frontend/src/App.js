@@ -1,10 +1,13 @@
 import React, { Component, Fragment } from 'react';
 import ReactDOM from 'react-dom';
-import {Route, withRouter, Switch} from 'react-router-dom';
+import {Route, Router, withRouter, Switch} from 'react-router-dom';
 import './App.css';
 import Output from './output.js';
-import Admin from './admin.js';
 import io from 'socket.io-client';
+import Home from './Home/Home';
+import Callback from './Callback/Callback';
+import Auth from './Auth/Auth';
+import history from './history';
 
 
 class App extends Component {
@@ -38,13 +41,32 @@ class App extends Component {
         });
     };
 
+    auth = new Auth();
+
+    handleAuthentication = ({location}) => {
+      if (/access_token|id_token|error/.test(location.hash)) {
+        this.auth.handleAuthentication();
+      }
+    }
+
 
     render() {
       if (!this.state.hasInitialData ) return <h1>Loading...</h1>;
 
       return (
 
-            <Output data={this.state.data}/>
+        <Router history={history}>
+          <div>
+            <Route path="/" render={(props) => <Output data={this.state.data}/>} />
+            <Route path="/admin" render={(props) => <Home data={this.state.data } auth={this.auth} {...props} />} />
+            <Route path="/callback" render={(props) => {
+              this.handleAuthentication(props);
+              return <Callback {...props} />
+            }}/>
+          </div>
+        </Router>
+
+
 
       );
     }

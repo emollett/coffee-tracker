@@ -4,7 +4,7 @@ const bodyParser = require("body-parser");
 const logger = require("morgan");
 const Data = require("./data");
 
-const API_PORT = 80;
+const API_PORT = 3001;
 const app = express();
 const router = express.Router();
 
@@ -12,7 +12,7 @@ const server = require("http").Server(app);
 const io = require("socket.io")(server);
 
 server.listen(80);
-// WARNING: app.listen(80) will NOT work here!
+// WARNING: app.listen(80) will NOT work here locally, but should be 80 for deployment
 
 //We are using socket.io to send messages that trigger the data to be updated on the client. See below for the emits on various events happening
 io.on("connection", function (socket) {

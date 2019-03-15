@@ -1,12 +1,13 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
+import ReactDOM from 'react-dom';
+import {Route, Router, withRouter, Switch} from 'react-router-dom';
 import './App.css';
-import Input from './input.js';
 import Output from './output.js';
-import Edit from './edit.js';
-import List from './list.js';
-import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import io from 'socket.io-client';
-
+import Home from './Home/Home';
+import Callback from './Callback/Callback';
+import Auth from './Auth/Auth';
+import history from './history';
 
 
 class App extends Component {
@@ -24,11 +25,11 @@ class App extends Component {
     // changed and implement those changes into our UI
     componentDidMount() {
       this.getDataFromDb();
+      //("http://127.0.0.1:3001") for local, () for live
       this.socket = io.connect();
       //this is where we are listening for the socket.io message sent from the server, which tells us to go and get the data again if something has changed.
       this.socket.on("NewData", this.getDataFromDb);
     };
-
 
 
     // our first get method that uses our backend api to
@@ -41,37 +42,35 @@ class App extends Component {
         });
     };
 
+    auth = new Auth();
+
+    handleAuthentication = ({location}) => {
+      if (/access_token|id_token|error/.test(location.hash)) {
+        this.auth.handleAuthentication();
+      }
+    }
+
 
     render() {
       if (!this.state.hasInitialData ) return <h1>Loading...</h1>;
 
       return (
-        <div>
 
-          <Output data={this.state.data} />
-
-            <Tabs>
-              <TabList>
-                <Tab><h3>Add a coffee</h3></Tab>
-                <Tab><h3>See all entries</h3></Tab>
-                <Tab><h3>Edit an entry</h3></Tab>
-              </TabList>
-
-              <TabPanel>
-                <Input data={this.state.data}/>
-              </TabPanel>
-              <TabPanel>
-                <List data={this.state.data}/>
-              </TabPanel>
-              <TabPanel>
-                <Edit data={this.state.data}/>
-              </TabPanel>
-            </Tabs>
+        <Router history={history}>
+          <div>
+            <Route path="/" render={(props) => <Output data={this.state.data}/>} />
+            <Route exact path="/admin" render={(props) => <Home data={this.state.data } auth={this.auth} {...props} />} />
+            <Route path="/callback" render={(props) => {
+              this.handleAuthentication(props);
+              return <Callback {...props} />
+            }}/>
+          </div>
+        </Router>
 
 
-        </div>
+
       );
     }
   }
 
-export default App;
+export default withRouter(App);

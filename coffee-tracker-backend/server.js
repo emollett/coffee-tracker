@@ -11,8 +11,8 @@ const router = express.Router();
 const server = require("http").Server(app);
 const io = require("socket.io")(server);
 
-server.listen(3001);
-// WARNING: app.listen(80) will NOT work here!
+server.listen(80);
+// WARNING: app.listen(80) will NOT work here locally, but should be 80 for deployment
 
 //We are using socket.io to send messages that trigger the data to be updated on the client. See below for the emits on various events happening
 io.on("connection", function (socket) {

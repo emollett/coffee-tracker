@@ -1,28 +1,31 @@
 import React, { Component } from 'react';
 import Admin from '../admin.js';
+import '../App.css';
 
 class Home extends Component {
+
   login() {
     this.props.auth.login();
   }
+
   render() {
     const { isAuthenticated } = this.props.auth;
     return (
-      <div className="container">
+      <div>
         {
           isAuthenticated() && (
             <div>
-              <h4>
+              <h4 className="bigPadding">
                 You are logged in!
               </h4>
 
               <Admin data={this.props.data } auth={this.props.auth} />
-              </div>
+            </div>
             )
         }
         {
           !isAuthenticated() && (
-              <h4>
+              <h4 className="bigPadding">
                 You are not logged in! Please{' '}
                 <a
                   style={{ cursor: 'pointer' }}

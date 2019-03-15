@@ -34,8 +34,7 @@ class Admin extends Component {
       const { isAuthenticated } = this.props.auth;
 
       return (
-        <div>
-
+        <div className="bigPadding">
               {
                 !isAuthenticated() && (
                     <Button
@@ -60,8 +59,6 @@ class Admin extends Component {
                     </Button>
                   )
               }
-
-
 
             <Tabs>
               <TabList>

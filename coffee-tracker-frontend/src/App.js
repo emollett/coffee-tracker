@@ -58,7 +58,7 @@ class App extends Component {
         <Router history={history}>
           <div>
             <Route path="/" render={(props) => <Output data={this.state.data}/>} />
-            <Route path="/admin" render={(props) => <Home data={this.state.data } auth={this.auth} {...props} />} />
+            <Route exact path="/admin" render={(props) => <Home data={this.state.data } auth={this.auth} {...props} />} />
             <Route path="/callback" render={(props) => {
               this.handleAuthentication(props);
               return <Callback {...props} />

@@ -45,6 +45,14 @@ app.use(bodyParser.json());
 app.use(logger("dev"));
 app.use(express.static('build'));
 
+app.get('/', function(req, res) {
+  res.sendFile(path.join(__dirname, 'build/index.html'), function(err) {
+    if (err) {
+      res.status(500).send(err)
+    }
+  })
+})
+
 
 // this is our get method
 // this method fetches all available data in our database

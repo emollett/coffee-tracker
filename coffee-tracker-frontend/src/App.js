@@ -57,6 +57,7 @@ class App extends Component {
       return (
 
         <Router history={history}>
+
           <div>
             <Route path="/" render={(props) => <Output data={this.state.data}/>} />
             <Route exact path="/admin" render={(props) => <Home data={this.state.data } auth={this.auth} {...props} />} />

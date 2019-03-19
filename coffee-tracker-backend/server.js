@@ -11,6 +11,8 @@ const router = express.Router();
 const server = require("http").Server(app);
 const io = require("socket.io")(server);
 
+var path = require('path');
+
 server.listen(80);
 // WARNING: app.listen(80) will NOT work here locally, but should be 80 for deployment
 
@@ -44,14 +46,6 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(logger("dev"));
 app.use(express.static('build'));
-
-app.get('/', function(req, res) {
-  res.sendFile(path.join(__dirname, 'build/index.html'), function(err) {
-    if (err) {
-      res.status(500).send(err)
-    }
-  })
-})
 
 
 // this is our get method
@@ -116,3 +110,14 @@ router.post("/putData", (req, res) => {
 
 // append /api for our http requests
 app.use("/api/", router);
+
+// Redirects all of your server requests to /index.html.
+// Any request that is made to your server will respond with the index page (and then fetch any JS resources you need)
+// React Router will then take over and load the appropriate view
+app.get('/*', function(req, res) {
+  res.sendFile(path.join(__dirname, 'build/index.html'), function(err) {
+    if (err) {
+      res.status(500).send(err)
+    }
+  })
+});

@@ -3,6 +3,9 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const logger = require("morgan");
 const Data = require("./data");
+const dotenv = require('dotenv');
+
+dotenv.config();
 
 const API_PORT = 3001;
 const app = express();
@@ -13,8 +16,9 @@ const io = require("socket.io")(server);
 
 var path = require('path');
 
-server.listen(80);
-// WARNING: app.listen(80) will NOT work here locally, but should be 80 for deployment
+console.log(`Your port is ${process.env.PORT}`);
+server.listen(`${process.env.PORT}`);
+// WARNING: app.listen(80) will NOT work here locally, but should be 80 for deployment. Locally use 3001
 
 //We are using socket.io to send messages that trigger the data to be updated on the client. See below for the emits on various events happening
 io.on("connection", function (socket) {
@@ -25,7 +29,7 @@ io.on("connection", function (socket) {
 });
 
 // this is our MongoDB database
-const dbRoute = "mongodb://localhost:27017/coffee-tracker";
+const dbRoute = `${process.env.DATABASE}`;
 
 // connects our back end code with the database
 mongoose.connect(

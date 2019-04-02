@@ -8,6 +8,9 @@ import Home from './Home/Home';
 import Callback from './Callback/Callback';
 import Auth from './Auth/Auth';
 import history from './history';
+const dotenv = require('dotenv');
+
+dotenv.config();
 
 
 class App extends Component {
@@ -26,7 +29,7 @@ class App extends Component {
     componentDidMount() {
       this.getDataFromDb();
       //("http://127.0.0.1:3001") for local, () for live
-      this.socket = io.connect();
+      this.socket = io.connect(process.env.REACT_APP_SOCKET_CONNECTION);
       //this is where we are listening for the socket.io message sent from the server, which tells us to go and get the data again if something has changed.
       this.socket.on("NewData", this.getDataFromDb);
     };

@@ -8,9 +8,7 @@ import Home from './Home/Home';
 import Callback from './Callback/Callback';
 import Auth from './Auth/Auth';
 import history from './history';
-const dotenv = require('dotenv');
 
-dotenv.config();
 
 
 class App extends Component {

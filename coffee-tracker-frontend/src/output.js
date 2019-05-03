@@ -15,6 +15,10 @@ class Output extends Component {
       }
     })
 
+    purchasers.sort(function (a, b){
+      return b.purchased - a.purchased;
+    })
+
     return (
       <div className="bigPadding">
         <ul>

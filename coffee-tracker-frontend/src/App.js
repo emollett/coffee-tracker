@@ -1,12 +1,12 @@
-import React, { Component, Fragment } from 'react';
-import ReactDOM from 'react-dom';
-import {Route, Router, withRouter, Switch} from 'react-router-dom';
+import React, { Component } from 'react';
+import {Route, Router, withRouter} from 'react-router-dom';
 import './App.css';
 import Output from './output.js';
 import io from 'socket.io-client';
 import Home from './Home/Home';
 import Callback from './Callback/Callback';
 import Auth from './Auth/Auth';
+import Graph from './graph.js';
 import history from './history';
 
 
@@ -60,8 +60,9 @@ class App extends Component {
         <Router history={history}>
 
           <div>
-            <Route path="/" render={(props) => <Output data={this.state.data}/>} />
+            <Route exact path="/" render={(props) => <Output data={this.state.data}/>} />
             <Route exact path="/admin" render={(props) => <Home data={this.state.data } auth={this.auth} {...props} />} />
+            <Route exact path="/graph" render={(props) => <Graph data={this.state.data }/>} />
             <Route path="/callback" render={(props) => {
               this.handleAuthentication(props);
               return <Callback {...props} />

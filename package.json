@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/emollett/coffee-tracker#readme",
   "dependencies": {
-    "concurrently": "^4.1.0"
+    "concurrently": "^4.1.0",
+    "node": "^12.2.0",
+    "prop-types": "^15.7.2"
   }
 }

@@ -38,6 +38,7 @@ class Graph extends Component {
 
     //go through coffee by month starting with the first year, first month
     var i;
+    coffeeByMonth.unshift({monthOpened:(coffeeByMonth[0].monthOpened - 1), yearOpened:coffeeByMonth[0].yearOpened, purchased: 0, sortNumber:(coffeeByMonth[0].sortNumber - 1)});
     for (i=0; i<(coffeeByMonth.length-1); i++){
       console.log("The month is " + coffeeByMonth[i].monthOpened);
         //if a month is missing, insert an entry for that month with no purchases

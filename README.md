@@ -27,3 +27,5 @@ https://docs.mongodb.com/manual/installation/
 
 I used a couple of sources to help me create this, this post gave me the basic structure for the app, and helped me get it storing and retrieving the data. I ended up pulling it apart into different components, but it was a very handy starting point.<br>
 https://medium.com/javascript-in-plain-english/full-stack-mongodb-react-node-js-express-js-in-one-simple-app-6cc8ed6de274
+
+https://codebuild.eu-west-2.amazonaws.com/badges?uuid=eyJlbmNyeXB0ZWREYXRhIjoiYVhYNVNyc295UnNMOFg5eW5VbTVOUExhVWtlQjVYaHZhTXB0cytnTjBGNWlrbzk0UUk4ZytuUCs4dmNmQXJxQ1pIbVl5RUR2L1hMTFpza2pDcVZIUFNBPSIsIml2UGFyYW1ldGVyU3BlYyI6IlN0NStzRmcrb0JxQlloV1kiLCJtYXRlcmlhbFNldFNlcmlhbCI6MX0%3D&branch=master

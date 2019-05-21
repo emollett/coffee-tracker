@@ -24,11 +24,15 @@ class Graph extends Component {
         var months = coffeeByMonth.find(months => {return months.monthOpened === monthofDate.getMonth() && months.yearOpened === monthofDate.getYear()});
 
         if (months !== undefined) {
-          months.purchased++
+          months.purchased++;
         }else{
-          coffeeByMonth.push({monthOpened:monthofDate.getMonth(), yearOpened:monthofDate.getYear(), purchased: 1, sortNumber:(12*monthofDate.getYear())+(monthofDate.getMonth())-1425})
+          coffeeByMonth.push({monthOpened: monthofDate.getMonth(),
+                              yearOpened: monthofDate.getYear(),
+                              purchased: 1,
+                              sortNumber: (12*monthofDate.getYear())+(monthofDate.getMonth()),
+                              label: monthofDate.setDate(1)
+                            });
         }
-
       }
     })
 
@@ -36,23 +40,31 @@ class Graph extends Component {
       return a.sortNumber - b.sortNumber;
     })
 
-    //go through coffee by month starting with the first year, first month
+    var monthofDate = new Date(coffeeByMonth[0].label);
+
+    coffeeByMonth.unshift({monthOpened: (coffeeByMonth[0].monthOpened - 1),
+                          yearOpened: coffeeByMonth[0].yearOpened,
+                          purchased: 0,
+                          sortNumber: (coffeeByMonth[0].sortNumber - 1),
+                          label: monthofDate.setMonth(coffeeByMonth[0].monthOpened - 1)
+                        });
     var i;
-    coffeeByMonth.unshift({monthOpened:(coffeeByMonth[0].monthOpened - 1), yearOpened:coffeeByMonth[0].yearOpened, purchased: 0, sortNumber:(coffeeByMonth[0].sortNumber - 1)});
     for (i=0; i<(coffeeByMonth.length-1); i++){
-      console.log("The month is " + coffeeByMonth[i].monthOpened);
-        //if a month is missing, insert an entry for that month with no purchases
-        if (coffeeByMonth[i].sortNumber == coffeeByMonth[i+1].sortNumber - 1){
-          console.log("and it is the same as the next month plus 1");
-        }else{
-          console.log("Oh no, we skipped one")
-          coffeeByMonth.splice(i+1, 0, {monthOpened:(coffeeByMonth[i].monthOpened + 1), yearOpened:coffeeByMonth[i].yearOpened, purchased: 0, sortNumber:(coffeeByMonth[i].sortNumber + 1)});
-          console.log("We added " + coffeeByMonth[i+1].sortNumber);
-        }
+      //if a month is missing, insert an entry for that month with no purchases
+      if (coffeeByMonth[i].sortNumber == coffeeByMonth[i+1].sortNumber - 1){
+      }else{
+        var monthofDate = new Date(coffeeByMonth[i].label);
+
+        coffeeByMonth.splice(i+1, 0, {monthOpened:(coffeeByMonth[i].monthOpened + 1),
+                                      yearOpened:coffeeByMonth[i].yearOpened,
+                                      purchased: 0,
+                                      sortNumber:(coffeeByMonth[i].sortNumber + 1),
+                                      label:monthofDate.setMonth(coffeeByMonth[i].monthOpened +1)
+                                    });
+      }
     }
 
-
-    let coffeeByMonthXY = coffeeByMonth.map( coffee => {return {x:coffee.sortNumber, y:coffee.purchased}});
+    let coffeeByMonthXY = coffeeByMonth.map( coffee => {return {x:coffee.label, y:coffee.purchased}});
 
     console.log(coffeeByMonth);
     console.log(coffeeByMonthXY);
@@ -65,7 +77,7 @@ class Graph extends Component {
             ? "NO DB ENTRIES YET"
             : coffeeByMonth.map(months => (
                 <div key={months.monthOpened}>
-                  <h2><Moment parse="M" format="MMMM">{months.monthOpened + 1}</Moment>/<Moment parse="YYYY" format="YYYY">{months.yearOpened + 1900}</Moment> : {months.purchased}</h2>
+                  <p><strong><Moment parse="M" format="MMMM">{months.monthOpened + 1}</Moment>/<Moment parse="YYYY" format="YYYY">{months.yearOpened + 1900}</Moment></strong> : {months.purchased}</p>
                 </div>
               ))}
         </ul>
@@ -78,15 +90,11 @@ class Graph extends Component {
             data={coffeeByMonthXY}/>
           <LineSeries
             data={coffeeByMonthXY}/>
-          <XAxis />
-          <YAxis />
+          <XAxis xType={"time"} tickLabelAngle={-30} title="Month opened" tickTotal={5} />
+          <YAxis title="Number of packs opened"/>
         </XYPlot>
 
       </div>
-
-
-
-
 
     );
   }

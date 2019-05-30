@@ -1,6 +1,6 @@
 # coffee-tracker
 
-This is for tracking the coffee purchasing of my team. Coffee is input with info about who bought it, when it was opened, and if people particularly liked it. In future I might do something with the date opened data, but for now it just tracks who bought the packs.
+This is for tracking the coffee purchasing of my team. Coffee is input with info about who bought it, when it was opened, and if people particularly liked it. You can see how many packs the team has consumed each month by going to /graph .
 
 http://coffee-tracker.eleanormollett.com/
 

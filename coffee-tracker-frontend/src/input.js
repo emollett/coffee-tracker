@@ -41,11 +41,13 @@ class Input extends Component {
         date: date,
         datePurchased: datePurchased,
       });
+
+      document.getElementById("new-coffee-form").reset();
     };
 
   render() {
     return (
-      <form className="bigPadding">
+      <form id="new-coffee-form" className="bigPadding">
 
         <div className="smallPadding">
         <h4>Add a coffee to the database</h4>

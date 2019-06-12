@@ -15,7 +15,10 @@ class Edit extends Component {
 
     // our delete method that uses our backend api
     // to remove existing database information
-    deleteFromDB = idTodelete => {
+    deleteFromDB = (idTodelete, event) => {
+
+      event.preventDefault(); // stop the page from refreshing
+
       let objIdToDelete = null;
       this.props.data.forEach(dat => {
         if (dat.id == idTodelete) {
@@ -28,12 +31,17 @@ class Edit extends Component {
           id: objIdToDelete
         }
       });
+
+      document.getElementById("deleting-form").reset();
     };
 
 
     // our update method that uses our backend api
     // to overwrite existing data base information
-    updateDB = (idToUpdate, updateToApply, updateToDate) => {
+    updateDB = (idToUpdate, updateToApply, updateToDate, event) => {
+
+      event.preventDefault(); // stop the page from refreshing
+
       let objIdToUpdate = null;
       this.props.data.forEach(dat => {
         if (dat.id == idToUpdate) {
@@ -47,6 +55,8 @@ class Edit extends Component {
           message: updateToApply,
           date: updateToDate}
       });
+
+      document.getElementById("updating-form").reset();
     };
 
   render() {
@@ -54,7 +64,7 @@ class Edit extends Component {
 
       <div className="outputBoxEdit">
 
-        <div className="deleting">
+        <form id="deleting-form" className="deleting">
             <div className="smallPadding">
               <h4>Id of item to delete</h4>
                 <input
@@ -64,13 +74,13 @@ class Edit extends Component {
             </div>
 
             <div className = "smallPadding">
-              <button onClick={() => this.deleteFromDB(this.state.idToDelete)}>
+              <button onClick={(event) => this.deleteFromDB(this.state.idToDelete, event)}>
                 <h4>DELETE</h4>
               </button>
             </div>
-        </div>
+        </form>
 
-        <div className="editing">
+        <form id="updating-form" className="editing">
             <div className="smallPadding">
               <h4>Id of item to update</h4>
                 <input
@@ -90,15 +100,11 @@ class Edit extends Component {
             </div>
 
             <div className="smallPadding">
-              <button
-                onClick={() =>
-                  this.updateDB(this.state.idToUpdate, this.state.updateToApply, this.state.updateToDate)
-                }
-              >
+              <button onClick={(event) => this.updateDB(this.state.idToUpdate, this.state.updateToApply, this.state.updateToDate, event)}>
                 <h4>UPDATE</h4>
               </button>
             </div>
-        </div>
+        </form>
 
       </div>
     )

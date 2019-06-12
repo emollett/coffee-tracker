@@ -63,20 +63,19 @@ class Admin extends Component {
             <Tabs>
               <TabList>
                 <Tab><h3>Add a coffee</h3></Tab>
-                <Tab><h3>See all entries</h3></Tab>
                 <Tab><h3>Edit an entry</h3></Tab>
               </TabList>
 
               <TabPanel>
                 <Input data={this.props.data}/>
               </TabPanel>
-              <TabPanel>
-                <List data={this.props.data}/>
-              </TabPanel>
+
               <TabPanel>
                 <Edit data={this.props.data}/>
               </TabPanel>
             </Tabs>
+
+            <List data={this.props.data}/>
 
         </div>
       );

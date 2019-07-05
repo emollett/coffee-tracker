@@ -1,3 +1,3 @@
 # scripts/before_install
 #!/bin/bash
-rm -rf coffee-tracker;
+rm -r /ubuntu/coffee-tracker/coffee-tracker-backend;

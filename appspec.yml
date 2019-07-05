@@ -1,8 +1,8 @@
 version: 0.0
 os: linux
 files:
-  - source: ./coffee-tracker-backend
-    destination: /ubuntu/coffee-tracker
+  - source: ./coffee-tracker-backend/
+    destination: /ubuntu/coffee-tracker/coffee-tracker-backend
 hooks:
   BeforeInstall:
     - location: scripts/before_install.sh

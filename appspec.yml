@@ -1,0 +1,14 @@
+version: 0.0
+os: linux
+files:
+  - source: ./coffee-tracker-frontend
+    destination: /ubuntu/coffee-tracker/coffee-tracker-backend
+hooks:
+  BeforeInstall:
+    - location: scripts/before_install.sh
+      timeout: 3000
+      runas: ubuntu
+  AfterInstall:
+    - location: scripts/after_install.sh
+      timeout: 3000
+      runas: ubuntu

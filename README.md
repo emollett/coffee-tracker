@@ -18,7 +18,7 @@ The page will reload if you make edits.<br>
 You will also see any lint errors in the console.
 
 ## Deployment
-I have deployed this using an EC2 instance. Once you have something similar set up, node and mongo installed, and the project cloned and dependencies updated, you can use firststart.sh to build the project and deploy it. For subsequent updates use run.sh to build the project and then deploy it which will restart the process manager.
+I have deployed this using an EC2 instance. Once you have something similar set up, node, mongo, pm2 and aws cli installed, and the project cloned and dependencies updated, you can use firststart.sh to build the project and deploy it. For subsequent updates use run.sh to build the project and then deploy it which will restart the process manager.
 
 ## Notes
 

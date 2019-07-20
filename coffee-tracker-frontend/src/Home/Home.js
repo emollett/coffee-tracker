@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Admin from '../admin.js';
 import '../App.css';
+import { Button } from 'react-bootstrap';
 
 class Home extends Component {
 
@@ -27,12 +28,14 @@ class Home extends Component {
           !isAuthenticated() && (
               <h4 className="bigPadding">
                 You are not logged in! Please{' '}
-                <a
-                  style={{ cursor: 'pointer' }}
+                <Button
+                  id="qsLoginBtn"
+                  href="#"
+                  className="btn-margin"
                   onClick={this.login.bind(this)}
                 >
                   Log In
-                </a>
+                </Button>
                 {' '}to continue.
               </h4>
             )

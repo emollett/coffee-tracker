@@ -6,13 +6,17 @@ export default class Auth {
   accessToken;
   idToken;
   expiresAt;
+  userProfile;
+  scopes;
+  requestedScopes = 'openid profile write:coffee';
 
   auth0 = new auth0.WebAuth({
     domain: AUTH_CONFIG.domain,
     clientID: AUTH_CONFIG.clientId,
     redirectUri: AUTH_CONFIG.callbackUrl,
     responseType: 'token id_token',
-    scope: 'openid'
+    audience: 'coffee-tracker',
+    scope: this.requestedScopes
   });
 
   constructor() {
@@ -23,6 +27,7 @@ export default class Auth {
     this.getAccessToken = this.getAccessToken.bind(this);
     this.getIdToken = this.getIdToken.bind(this);
     this.renewSession = this.renewSession.bind(this);
+    this.getProfile = this.getProfile.bind(this);
   }
 
   login() {
@@ -53,6 +58,9 @@ export default class Auth {
     // Set isLoggedIn flag in localStorage
     localStorage.setItem('isLoggedIn', 'true');
 
+    // Set the users scopes
+    this.scopes = authResult.scope || this.requestedScopes || '';
+
     // Set the time that the access token will expire at
     let expiresAt = (authResult.expiresIn * 1000) + new Date().getTime();
     this.accessToken = authResult.accessToken;
@@ -64,7 +72,8 @@ export default class Auth {
   }
 
   renewSession() {
-    this.auth0.checkSession({}, (err, authResult) => {
+    //this used to be this.auth0.checkSession which didn't work - the authResult was undefined - I should look more into this
+    this.auth0.parseHash((err, authResult) => {
        if (authResult && authResult.accessToken && authResult.idToken) {
          this.setSession(authResult);
        } else if (err) {
@@ -75,6 +84,16 @@ export default class Auth {
     });
   }
 
+  getProfile(cb) {
+    this.auth0.client.userInfo(this.accessToken, (err, profile) => {
+      if (profile) {
+        this.userProfile = profile;
+      }
+      cb(err, profile);
+    });
+  }
+
+
   logout() {
     // Remove tokens and expiry time
     this.accessToken = null;
@@ -83,6 +102,9 @@ export default class Auth {
 
     // Remove isLoggedIn flag from localStorage
     localStorage.removeItem('isLoggedIn');
+
+    // Remove user profile
+    this.userProfile = null;
 
     // navigate to the home route
     history.replace('/admin');
@@ -94,4 +116,10 @@ export default class Auth {
     let expiresAt = this.expiresAt;
     return new Date().getTime() < expiresAt;
   }
+
+userHasScopes(scopes) {
+  const grantedScopes = this.scopes.split(' ');
+  return scopes.every(scope => grantedScopes.includes(scope));
+}
+
 }

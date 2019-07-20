@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
-import { Navbar, Button } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 import './App.css';
 import Input from './input.js';
 import Edit from './edit.js';
 import List from './list.js';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import Output from './output.js';
-
-import {Route, Link, withRouter} from 'react-router-dom';
+import { withRouter} from 'react-router-dom';
 
 
 class Admin extends Component {

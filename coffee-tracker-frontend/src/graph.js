@@ -14,11 +14,8 @@ class Graph extends Component {
     this.props.data.forEach( entry => {
 
       var monthofDate = new Date(entry.date);
-      console.log("date is " + monthofDate);
-      console.log("year is " + monthofDate.getYear());
 
       if (monthofDate.getYear() == 70 || monthofDate == 'Invalid Date'){
-        console.log("GONE");
       }else{
 
         var months = coffeeByMonth.find(months => {return months.monthOpened === monthofDate.getMonth() && months.yearOpened === monthofDate.getYear()});
@@ -53,7 +50,7 @@ class Graph extends Component {
       //if a month is missing, insert an entry for that month with no purchases
       if (coffeeByMonth[i].sortNumber == coffeeByMonth[i+1].sortNumber - 1){
       }else{
-        var monthofDate = new Date(coffeeByMonth[i].label);
+        monthofDate = new Date(coffeeByMonth[i].label);
 
         coffeeByMonth.splice(i+1, 0, {monthOpened:(coffeeByMonth[i].monthOpened + 1),
                                       yearOpened:coffeeByMonth[i].yearOpened,
@@ -66,8 +63,6 @@ class Graph extends Component {
 
     let coffeeByMonthXY = coffeeByMonth.map( coffee => {return {x:coffee.label, y:coffee.purchased}});
 
-    console.log(coffeeByMonth);
-    console.log(coffeeByMonthXY);
 
     return (
 

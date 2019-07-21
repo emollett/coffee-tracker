@@ -78,8 +78,9 @@ export default class Auth {
     //this used to be this.auth0.checkSession which didn't work - the authResult was undefined - I should look more into this
       //I need checkSession - parseHash only works on the initial authentication, so I need to get the authResult again - also gives an authResult of null
       //I've tried a couple of things in the audience bit - anything other than this returns an error that the service doesn't exist
-      //this current returns an error saying login is required and stil gets no authResult
+      //this current returns an error saying login is required and stil gets no authResult - {error: "login_required", error_description: "Login required"}
       //if I use a non google log in the error I get is {error: "consent_required", error_description: "Consent required"} - I can however login again without going through the lock screen
+      //in production, you time out after 1 minute rather than immediately. if you refresh or logout, you have to click login again, but you get taken right in. after 1 minute you get the error message - Could not get a new token (timeout: Timeout during executing web_message communication).
     this.auth0.checkSession({audience: 'https://coffee-tracker.eu.auth0.com/api/v2/'}, (err, authResult) => {
       console.log(authResult);
        if (authResult && authResult.accessToken && authResult.idToken) {

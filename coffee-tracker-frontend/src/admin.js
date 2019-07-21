@@ -18,10 +18,13 @@ class Admin extends Component {
     this.props.auth.logout();
   }
 
-  componentDidMount() {
+
+  componentDidUpdate() {
     const { renewSession } = this.props.auth;
+    console.log("Is logged is " + localStorage.getItem('isLoggedIn'));
 
     if (localStorage.getItem('isLoggedIn') === 'true') {
+      console.log("The check of the isLoggedIn worked")
       renewSession();
     }
   }

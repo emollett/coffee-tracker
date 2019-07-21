@@ -37,10 +37,12 @@ export default class Auth {
   handleAuthentication() {
     this.auth0.parseHash((err, authResult) => {
       if (authResult && authResult.accessToken && authResult.idToken) {
+        console.log("first bit of handleAuthentication");
         this.setSession(authResult);
       } else if (err) {
         history.replace('/admin');
         console.log(err);
+        console.log("second bit of handleauthentication");
         alert(`Error: ${err.error}. Check the console for further details.`);
       }
     });
@@ -72,13 +74,21 @@ export default class Auth {
   }
 
   renewSession() {
+    console.log("Renew Session fired");
     //this used to be this.auth0.checkSession which didn't work - the authResult was undefined - I should look more into this
-    this.auth0.parseHash((err, authResult) => {
+      //I need checkSession - parseHash only works on the initial authentication, so I need to get the authResult again - also gives an authResult of null
+      //I've tried a couple of things in the audience bit - anything other than this returns an error that the service doesn't exist
+      //this current returns an error saying login is required and stil gets no authResult
+      //if I use a non google log in the error I get is {error: "consent_required", error_description: "Consent required"} - I can however login again without going through the lock screen
+    this.auth0.checkSession({audience: 'https://coffee-tracker.eu.auth0.com/api/v2/'}, (err, authResult) => {
+      console.log(authResult);
        if (authResult && authResult.accessToken && authResult.idToken) {
+         console.log("This first bit of renewSession should work");
          this.setSession(authResult);
        } else if (err) {
          this.logout();
          console.log(err);
+         console.log("This second bit renewSession is working instead");
          alert(`Could not get a new token (${err.error}: ${err.error_description}).`);
        }
     });

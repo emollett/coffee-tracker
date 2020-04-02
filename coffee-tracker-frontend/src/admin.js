@@ -19,13 +19,19 @@ class Admin extends Component {
   }
 
 
-  componentDidUpdate() {
-    const { renewSession } = this.props.auth;
-    console.log("Is logged is " + localStorage.getItem('isLoggedIn'));
+  async componentDidMount() {
+    try {
+      setInterval(async () => {
+        const { renewSession } = this.props.auth;
+        console.log("Is logged is " + localStorage.getItem('isLoggedIn'));
 
-    if (localStorage.getItem('isLoggedIn') === 'true') {
-      console.log("The check of the isLoggedIn worked")
-      renewSession();
+        if (localStorage.getItem('isLoggedIn') === 'true') {
+          console.log("The check of the isLoggedIn worked")
+          renewSession();
+        }
+      }, 9000)
+    } catch(error) {
+      console.error(error);
     }
   }
 

@@ -38,6 +38,7 @@ export default class Auth {
     this.auth0.parseHash((err, authResult) => {
       if (authResult && authResult.accessToken && authResult.idToken) {
         console.log("first bit of handleAuthentication");
+        console.log("authResult immediately after handleAuthentication " , authResult);
         this.setSession(authResult);
       } else if (err) {
         history.replace('/admin');
@@ -59,14 +60,17 @@ export default class Auth {
   setSession(authResult) {
     // Set isLoggedIn flag in localStorage
     localStorage.setItem('isLoggedIn', 'true');
-
+    console.log("the authResult in setSession", authResult);
     // Set the users scopes
     this.scopes = authResult.scope || this.requestedScopes || '';
+    console.log("the scopes in setSession" , this.scopes);
 
     // Set the time that the access token will expire at
     let expiresAt = (authResult.expiresIn * 1000) + new Date().getTime();
+    console.log("The expiresAt in setSession", expiresAt);
     this.accessToken = authResult.accessToken;
     this.idToken = authResult.idToken;
+    console.log("The id token in setSession", this.idToken);
     this.expiresAt = expiresAt;
 
     // navigate to the home route
@@ -81,13 +85,15 @@ export default class Auth {
       //this current returns an error saying login is required and stil gets no authResult - {error: "login_required", error_description: "Login required"}
       //if I use a non google log in the error I get is {error: "consent_required", error_description: "Consent required"} - I can however login again without going through the lock screen
       //in production, you time out after 1 minute rather than immediately. if you refresh or logout, you have to click login again, but you get taken right in. after 1 minute you get the error message - Could not get a new token (timeout: Timeout during executing web_message communication).
-    this.auth0.checkSession({audience: 'https://coffee-tracker.eu.auth0.com/api/v2/'}, (err, authResult) => {
-      console.log(authResult);
+// this.auth0.checkSession({audience: 'https://coffee-tracker.eu.auth0.com/api/v2/'}, (err, authResult) => {
+    this.auth0.checkSession({}, (err, authResult) => {
+      console.log(this);
+      debugger;
        if (authResult && authResult.accessToken && authResult.idToken) {
          console.log("This first bit of renewSession should work");
          this.setSession(authResult);
        } else if (err) {
-         this.logout();
+         // this.logout();
          console.log(err);
          console.log("This second bit renewSession is working instead");
          alert(`Could not get a new token (${err.error}: ${err.error_description}).`);

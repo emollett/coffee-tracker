@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import {Route, Router, withRouter} from 'react-router-dom';
-import './App.css';
-import Output from './output.js';
+import '../App.css';
+import Output from '../Output/output.js';
 import io from 'socket.io-client';
-import Home from './Home/Home';
-import Callback from './Callback/Callback';
-import Auth from './Auth/Auth';
-import Graph from './graph.js';
-import history from './history';
+import Home from '../Home/Home';
+import Callback from '../Callback/Callback';
+import Auth from '../Auth/Auth';
+import Graph from '../graph.js';
+import history from '../history';
 
 
 

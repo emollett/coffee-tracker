@@ -3,7 +3,7 @@ import { Button } from 'react-bootstrap';
 import './App.css';
 import Input from './input.js';
 import Edit from './edit.js';
-import List from './list.js';
+import List from './List/List.js';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import { withRouter} from 'react-router-dom';
 

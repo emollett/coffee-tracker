@@ -14,3 +14,9 @@ it('sorts the user who has bought the most coffee to the top', () => {
     ReactDOM.render(<Output data={testData}/>, div);
     expect(div.querySelector("h2").textContent).toBe("Alice:")
   });
+
+it('groups the purchases by purchaser', () => {
+  const div = document.createElement('div');
+  ReactDOM.render(<Output data={testData}/>, div);
+  expect(div.querySelectorAll("h2")).toHaveLength(3)
+});

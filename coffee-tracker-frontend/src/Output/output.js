@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import '../App.css';
-import Coffeemug from '../coffeemug.js';
+import Coffeemug from '../Coffeemug/Coffeemug.js';
 class Output extends Component {
   render() {
 

@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "concurrently \"cd coffee-tracker-backend && node server.js\" \"cd coffee-tracker-frontend && npm start\""
+    "start": "concurrently \"cd coffee-tracker-backend && node server.js\" \"cd coffee-tracker-frontend && yarn start\""
   },
   "repository": {
     "type": "git",

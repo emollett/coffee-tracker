@@ -1,8 +1,10 @@
 {
-  "name": "coffee-tracker",
+  "name": "coffee-tracker-frontend",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@babel/preset-env": "^7.9.0",
+    "@babel/preset-react": "^7.9.4",
     "@reach/router": "^1.2.1",
     "auth0-js": "^9.9.0",
     "axios": "^0.18.0",
@@ -21,6 +23,7 @@
     "react-router-dom": "^4.3.1",
     "react-scripts": "^2.1.8",
     "react-tabs": "^2.3.0",
+    "react-test-renderer": "^16.13.1",
     "react-vis": "^1.11.7",
     "socket.io-client": "^2.2.0",
     "typescript": "^3.4.5"

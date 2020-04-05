@@ -1,0 +1,1005 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="bigPadding"
+>
+  <ul>
+    <div>
+      <p>
+        <strong>
+          <time
+            dateTime={"2020-03-31T23:00:00.000Z"}
+          >
+            April
+          </time>
+          /
+          <time
+            dateTime={"2018-01-01T00:00:00.000Z"}
+          >
+            2018
+          </time>
+        </strong>
+         : 
+        0
+      </p>
+    </div>
+    <div>
+      <p>
+        <strong>
+          <time
+            dateTime={"2020-04-30T23:00:00.000Z"}
+          >
+            May
+          </time>
+          /
+          <time
+            dateTime={"2018-01-01T00:00:00.000Z"}
+          >
+            2018
+          </time>
+        </strong>
+         : 
+        1
+      </p>
+    </div>
+    <div>
+      <p>
+        <strong>
+          <time
+            dateTime={"2020-05-31T23:00:00.000Z"}
+          >
+            June
+          </time>
+          /
+          <time
+            dateTime={"2018-01-01T00:00:00.000Z"}
+          >
+            2018
+          </time>
+        </strong>
+         : 
+        2
+      </p>
+    </div>
+    <div>
+      <p>
+        <strong>
+          <time
+            dateTime={"2020-06-30T23:00:00.000Z"}
+          >
+            July
+          </time>
+          /
+          <time
+            dateTime={"2018-01-01T00:00:00.000Z"}
+          >
+            2018
+          </time>
+        </strong>
+         : 
+        2
+      </p>
+    </div>
+    <div>
+      <p>
+        <strong>
+          <time
+            dateTime={"2020-07-31T23:00:00.000Z"}
+          >
+            August
+          </time>
+          /
+          <time
+            dateTime={"2018-01-01T00:00:00.000Z"}
+          >
+            2018
+          </time>
+        </strong>
+         : 
+        0
+      </p>
+    </div>
+    <div>
+      <p>
+        <strong>
+          <time
+            dateTime={"2020-08-31T23:00:00.000Z"}
+          >
+            September
+          </time>
+          /
+          <time
+            dateTime={"2018-01-01T00:00:00.000Z"}
+          >
+            2018
+          </time>
+        </strong>
+         : 
+        0
+      </p>
+    </div>
+    <div>
+      <p>
+        <strong>
+          <time
+            dateTime={"2020-09-30T23:00:00.000Z"}
+          >
+            October
+          </time>
+          /
+          <time
+            dateTime={"2018-01-01T00:00:00.000Z"}
+          >
+            2018
+          </time>
+        </strong>
+         : 
+        0
+      </p>
+    </div>
+    <div>
+      <p>
+        <strong>
+          <time
+            dateTime={"2020-11-01T00:00:00.000Z"}
+          >
+            November
+          </time>
+          /
+          <time
+            dateTime={"2018-01-01T00:00:00.000Z"}
+          >
+            2018
+          </time>
+        </strong>
+         : 
+        0
+      </p>
+    </div>
+    <div>
+      <p>
+        <strong>
+          <time
+            dateTime={"2020-12-01T00:00:00.000Z"}
+          >
+            December
+          </time>
+          /
+          <time
+            dateTime={"2018-01-01T00:00:00.000Z"}
+          >
+            2018
+          </time>
+        </strong>
+         : 
+        0
+      </p>
+    </div>
+    <div>
+      <p>
+        <strong>
+          <time
+            dateTime={null}
+          >
+            Invalid date
+          </time>
+          /
+          <time
+            dateTime={"2018-01-01T00:00:00.000Z"}
+          >
+            2018
+          </time>
+        </strong>
+         : 
+        0
+      </p>
+    </div>
+    <div>
+      <p>
+        <strong>
+          <time
+            dateTime={null}
+          >
+            Invalid date
+          </time>
+          /
+          <time
+            dateTime={"2018-01-01T00:00:00.000Z"}
+          >
+            2018
+          </time>
+        </strong>
+         : 
+        0
+      </p>
+    </div>
+    <div>
+      <p>
+        <strong>
+          <time
+            dateTime={null}
+          >
+            Invalid date
+          </time>
+          /
+          <time
+            dateTime={"2018-01-01T00:00:00.000Z"}
+          >
+            2018
+          </time>
+        </strong>
+         : 
+        0
+      </p>
+    </div>
+    <div>
+      <p>
+        <strong>
+          <time
+            dateTime={null}
+          >
+            Invalid date
+          </time>
+          /
+          <time
+            dateTime={"2018-01-01T00:00:00.000Z"}
+          >
+            2018
+          </time>
+        </strong>
+         : 
+        0
+      </p>
+    </div>
+    <div>
+      <p>
+        <strong>
+          <time
+            dateTime={null}
+          >
+            Invalid date
+          </time>
+          /
+          <time
+            dateTime={"2018-01-01T00:00:00.000Z"}
+          >
+            2018
+          </time>
+        </strong>
+         : 
+        0
+      </p>
+    </div>
+    <div>
+      <p>
+        <strong>
+          <time
+            dateTime={null}
+          >
+            Invalid date
+          </time>
+          /
+          <time
+            dateTime={"2018-01-01T00:00:00.000Z"}
+          >
+            2018
+          </time>
+        </strong>
+         : 
+        0
+      </p>
+    </div>
+    <div>
+      <p>
+        <strong>
+          <time
+            dateTime={"2020-06-30T23:00:00.000Z"}
+          >
+            July
+          </time>
+          /
+          <time
+            dateTime={"2019-01-01T00:00:00.000Z"}
+          >
+            2019
+          </time>
+        </strong>
+         : 
+        1
+      </p>
+    </div>
+  </ul>
+  <div
+    className="rv-xy-plot "
+    style={
+      Object {
+        "height": "300px",
+        "width": "900px",
+      }
+    }
+  >
+    <svg
+      className="rv-xy-plot__inner"
+      height={300}
+      onClick={[Function]}
+      onDoubleClick={[Function]}
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      onMouseMove={[Function]}
+      onMouseUp={[Function]}
+      onTouchCancel={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      onWheel={[Function]}
+      width={900}
+    >
+      <g
+        className="rv-xy-plot__grid-lines undefined"
+        transform="translate(40,10)"
+      >
+        <line
+          className="rv-xy-plot__grid-lines__line"
+          x1={0}
+          x2={850}
+          y1={250}
+          y2={250}
+        />
+        <line
+          className="rv-xy-plot__grid-lines__line"
+          x1={0}
+          x2={850}
+          y1={187.5}
+          y2={187.5}
+        />
+        <line
+          className="rv-xy-plot__grid-lines__line"
+          x1={0}
+          x2={850}
+          y1={125}
+          y2={125}
+        />
+        <line
+          className="rv-xy-plot__grid-lines__line"
+          x1={0}
+          x2={850}
+          y1={62.5}
+          y2={62.5}
+        />
+        <line
+          className="rv-xy-plot__grid-lines__line"
+          x1={0}
+          x2={850}
+          y1={0}
+          y2={0}
+        />
+      </g>
+      <g
+        className="rv-xy-plot__series rv-xy-plot__series--mark undefined"
+        transform="translate(40,10)"
+      >
+        <circle
+          cx={0}
+          cy={250}
+          onClick={[Function]}
+          onContextMenu={[Function]}
+          onMouseOut={[Function]}
+          onMouseOver={[Function]}
+          r={5}
+          style={
+            Object {
+              "fill": "#12939A",
+              "opacity": 1,
+              "stroke": "#12939A",
+              "strokeWidth": 1,
+            }
+          }
+        />
+        <circle
+          cx={11.318242343541943}
+          cy={125}
+          onClick={[Function]}
+          onContextMenu={[Function]}
+          onMouseOut={[Function]}
+          onMouseOver={[Function]}
+          r={5}
+          style={
+            Object {
+              "fill": "#12939A",
+              "opacity": 1,
+              "stroke": "#12939A",
+              "strokeWidth": 1,
+            }
+          }
+        />
+        <circle
+          cx={23.01375943186862}
+          cy={0}
+          onClick={[Function]}
+          onContextMenu={[Function]}
+          onMouseOut={[Function]}
+          onMouseOver={[Function]}
+          r={5}
+          style={
+            Object {
+              "fill": "#12939A",
+              "opacity": 1,
+              "stroke": "#12939A",
+              "strokeWidth": 1,
+            }
+          }
+        />
+        <circle
+          cx={34.33200177541056}
+          cy={0}
+          onClick={[Function]}
+          onContextMenu={[Function]}
+          onMouseOut={[Function]}
+          onMouseOver={[Function]}
+          r={5}
+          style={
+            Object {
+              "fill": "#12939A",
+              "opacity": 1,
+              "stroke": "#12939A",
+              "strokeWidth": 1,
+            }
+          }
+        />
+        <circle
+          cx={46.02751886373724}
+          cy={250}
+          onClick={[Function]}
+          onContextMenu={[Function]}
+          onMouseOut={[Function]}
+          onMouseOver={[Function]}
+          r={5}
+          style={
+            Object {
+              "fill": "#12939A",
+              "opacity": 1,
+              "stroke": "#12939A",
+              "strokeWidth": 1,
+            }
+          }
+        />
+        <circle
+          cx={57.72303595206392}
+          cy={250}
+          onClick={[Function]}
+          onContextMenu={[Function]}
+          onMouseOut={[Function]}
+          onMouseOver={[Function]}
+          r={5}
+          style={
+            Object {
+              "fill": "#12939A",
+              "opacity": 1,
+              "stroke": "#12939A",
+              "strokeWidth": 1,
+            }
+          }
+        />
+        <circle
+          cx={69.04127829560586}
+          cy={250}
+          onClick={[Function]}
+          onContextMenu={[Function]}
+          onMouseOut={[Function]}
+          onMouseOver={[Function]}
+          r={5}
+          style={
+            Object {
+              "fill": "#12939A",
+              "opacity": 1,
+              "stroke": "#12939A",
+              "strokeWidth": 1,
+            }
+          }
+        />
+        <circle
+          cx={80.75251516496523}
+          cy={250}
+          onClick={[Function]}
+          onContextMenu={[Function]}
+          onMouseOut={[Function]}
+          onMouseOver={[Function]}
+          r={5}
+          style={
+            Object {
+              "fill": "#12939A",
+              "opacity": 1,
+              "stroke": "#12939A",
+              "strokeWidth": 1,
+            }
+          }
+        />
+        <circle
+          cx={92.07075750850717}
+          cy={250}
+          onClick={[Function]}
+          onContextMenu={[Function]}
+          onMouseOut={[Function]}
+          onMouseOver={[Function]}
+          r={5}
+          style={
+            Object {
+              "fill": "#12939A",
+              "opacity": 1,
+              "stroke": "#12939A",
+              "strokeWidth": 1,
+            }
+          }
+        />
+        <circle
+          cx={103.76627459683384}
+          cy={250}
+          onClick={[Function]}
+          onContextMenu={[Function]}
+          onMouseOut={[Function]}
+          onMouseOver={[Function]}
+          r={5}
+          style={
+            Object {
+              "fill": "#12939A",
+              "opacity": 1,
+              "stroke": "#12939A",
+              "strokeWidth": 1,
+            }
+          }
+        />
+        <circle
+          cx={253.16707353158753}
+          cy={250}
+          onClick={[Function]}
+          onContextMenu={[Function]}
+          onMouseOut={[Function]}
+          onMouseOver={[Function]}
+          r={5}
+          style={
+            Object {
+              "fill": "#12939A",
+              "opacity": 1,
+              "stroke": "#12939A",
+              "strokeWidth": 1,
+            }
+          }
+        />
+        <circle
+          cx={401.81332297677176}
+          cy={250}
+          onClick={[Function]}
+          onContextMenu={[Function]}
+          onMouseOut={[Function]}
+          onMouseOver={[Function]}
+          r={5}
+          style={
+            Object {
+              "fill": "#12939A",
+              "opacity": 1,
+              "stroke": "#12939A",
+              "strokeWidth": 1,
+            }
+          }
+        />
+        <circle
+          cx={551.1984021304927}
+          cy={250}
+          onClick={[Function]}
+          onContextMenu={[Function]}
+          onMouseOut={[Function]}
+          onMouseOver={[Function]}
+          r={5}
+          style={
+            Object {
+              "fill": "#12939A",
+              "opacity": 1,
+              "stroke": "#12939A",
+              "strokeWidth": 1,
+            }
+          }
+        />
+        <circle
+          cx={700.2219263204615}
+          cy={250}
+          onClick={[Function]}
+          onContextMenu={[Function]}
+          onMouseOut={[Function]}
+          onMouseOver={[Function]}
+          r={5}
+          style={
+            Object {
+              "fill": "#12939A",
+              "opacity": 1,
+              "stroke": "#12939A",
+              "strokeWidth": 1,
+            }
+          }
+        />
+        <circle
+          cx={850}
+          cy={250}
+          onClick={[Function]}
+          onContextMenu={[Function]}
+          onMouseOut={[Function]}
+          onMouseOver={[Function]}
+          r={5}
+          style={
+            Object {
+              "fill": "#12939A",
+              "opacity": 1,
+              "stroke": "#12939A",
+              "strokeWidth": 1,
+            }
+          }
+        />
+        <circle
+          cx={172.03728362183756}
+          cy={125}
+          onClick={[Function]}
+          onContextMenu={[Function]}
+          onMouseOut={[Function]}
+          onMouseOver={[Function]}
+          r={5}
+          style={
+            Object {
+              "fill": "#12939A",
+              "opacity": 1,
+              "stroke": "#12939A",
+              "strokeWidth": 1,
+            }
+          }
+        />
+      </g>
+      <path
+        className="rv-xy-plot__series rv-xy-plot__series--line "
+        d="M0,250L11.318242343541943,125L23.01375943186862,0L34.33200177541056,0L46.02751886373724,250L57.72303595206392,250L69.04127829560586,250L80.75251516496523,250L92.07075750850717,250L103.76627459683384,250L253.16707353158753,250L401.81332297677176,250L551.1984021304927,250L700.2219263204615,250L850,250L172.03728362183756,125"
+        onClick={[Function]}
+        onContextMenu={[Function]}
+        onMouseOut={[Function]}
+        onMouseOver={[Function]}
+        style={
+          Object {
+            "opacity": 1,
+            "stroke": "#79C7E3",
+            "strokeDasharray": undefined,
+            "strokeWidth": undefined,
+          }
+        }
+        transform="translate(40,10)"
+      />
+      <g
+        className="rv-xy-plot__axis rv-xy-plot__axis--horizontal "
+        style={Object {}}
+        transform="translate(40,260)"
+      >
+        <line
+          className="rv-xy-plot__axis__line"
+          style={Object {}}
+          x1={0}
+          x2={850}
+          y1={0}
+          y2={0}
+        />
+        <g
+          className="rv-xy-plot__axis__ticks"
+          transform="translate(0, 0)"
+        >
+          <g
+            className="rv-xy-plot__axis__tick"
+            style={Object {}}
+            transform="translate(103.64007304201394, 0)"
+          >
+            <line
+              className="rv-xy-plot__axis__tick__line"
+              style={Object {}}
+              x1={0}
+              x2={0}
+              y1={-6}
+              y2={6}
+            />
+            <text
+              className="rv-xy-plot__axis__tick__text"
+              dy="0"
+              style={Object {}}
+              textAnchor="end"
+              transform="translate(0, 14) rotate(-30)"
+            >
+              2019
+            </text>
+          </g>
+          <g
+            className="rv-xy-plot__axis__tick"
+            style={Object {}}
+            transform="translate(241.34535488844094, 0)"
+          >
+            <line
+              className="rv-xy-plot__axis__tick__line"
+              style={Object {}}
+              x1={0}
+              x2={0}
+              y1={-6}
+              y2={6}
+            />
+            <text
+              className="rv-xy-plot__axis__tick__text"
+              dy="0"
+              style={Object {}}
+              textAnchor="end"
+              transform="translate(0, 14) rotate(-30)"
+            >
+              2020
+            </text>
+          </g>
+          <g
+            className="rv-xy-plot__axis__tick"
+            style={Object {}}
+            transform="translate(379.42791147965266, 0)"
+          >
+            <line
+              className="rv-xy-plot__axis__tick__line"
+              style={Object {}}
+              x1={0}
+              x2={0}
+              y1={-6}
+              y2={6}
+            />
+            <text
+              className="rv-xy-plot__axis__tick__text"
+              dy="0"
+              style={Object {}}
+              textAnchor="end"
+              transform="translate(0, 14) rotate(-30)"
+            >
+              2021
+            </text>
+          </g>
+          <g
+            className="rv-xy-plot__axis__tick"
+            style={Object {}}
+            transform="translate(517.1331933260797, 0)"
+          >
+            <line
+              className="rv-xy-plot__axis__tick__line"
+              style={Object {}}
+              x1={0}
+              x2={0}
+              y1={-6}
+              y2={6}
+            />
+            <text
+              className="rv-xy-plot__axis__tick__text"
+              dy="0"
+              style={Object {}}
+              textAnchor="end"
+              transform="translate(0, 14) rotate(-30)"
+            >
+              2022
+            </text>
+          </g>
+          <g
+            className="rv-xy-plot__axis__tick"
+            style={Object {}}
+            transform="translate(654.8384751725066, 0)"
+          >
+            <line
+              className="rv-xy-plot__axis__tick__line"
+              style={Object {}}
+              x1={0}
+              x2={0}
+              y1={-6}
+              y2={6}
+            />
+            <text
+              className="rv-xy-plot__axis__tick__text"
+              dy="0"
+              style={Object {}}
+              textAnchor="end"
+              transform="translate(0, 14) rotate(-30)"
+            >
+              2023
+            </text>
+          </g>
+          <g
+            className="rv-xy-plot__axis__tick"
+            style={Object {}}
+            transform="translate(792.5437570189337, 0)"
+          >
+            <line
+              className="rv-xy-plot__axis__tick__line"
+              style={Object {}}
+              x1={0}
+              x2={0}
+              y1={-6}
+              y2={6}
+            />
+            <text
+              className="rv-xy-plot__axis__tick__text"
+              dy="0"
+              style={Object {}}
+              textAnchor="end"
+              transform="translate(0, 14) rotate(-30)"
+            >
+              2024
+            </text>
+          </g>
+        </g>
+        <g
+          className="rv-xy-plot__axis__title"
+          transform="translate(0, 0)"
+        >
+          <g
+            style={
+              Object {
+                "textAnchor": "end",
+              }
+            }
+            transform="translate(844, -6) rotate(0)"
+          >
+            <text
+              style={Object {}}
+            >
+              Month opened
+            </text>
+          </g>
+        </g>
+      </g>
+      <g
+        className="rv-xy-plot__axis rv-xy-plot__axis--vertical "
+        style={Object {}}
+        transform="translate(0,10)"
+      >
+        <line
+          className="rv-xy-plot__axis__line"
+          style={Object {}}
+          x1={40}
+          x2={40}
+          y1={0}
+          y2={250}
+        />
+        <g
+          className="rv-xy-plot__axis__ticks"
+          transform="translate(40, 0)"
+        >
+          <g
+            className="rv-xy-plot__axis__tick"
+            style={Object {}}
+            transform="translate(0, 250)"
+          >
+            <line
+              className="rv-xy-plot__axis__tick__line"
+              style={Object {}}
+              x1={6}
+              x2={-6}
+              y1={0}
+              y2={0}
+            />
+            <text
+              className="rv-xy-plot__axis__tick__text"
+              dy="0.32em"
+              style={Object {}}
+              textAnchor="end"
+              transform="translate(-14, 0)"
+            >
+              0.0
+            </text>
+          </g>
+          <g
+            className="rv-xy-plot__axis__tick"
+            style={Object {}}
+            transform="translate(0, 187.5)"
+          >
+            <line
+              className="rv-xy-plot__axis__tick__line"
+              style={Object {}}
+              x1={6}
+              x2={-6}
+              y1={0}
+              y2={0}
+            />
+            <text
+              className="rv-xy-plot__axis__tick__text"
+              dy="0.32em"
+              style={Object {}}
+              textAnchor="end"
+              transform="translate(-14, 0)"
+            >
+              0.5
+            </text>
+          </g>
+          <g
+            className="rv-xy-plot__axis__tick"
+            style={Object {}}
+            transform="translate(0, 125)"
+          >
+            <line
+              className="rv-xy-plot__axis__tick__line"
+              style={Object {}}
+              x1={6}
+              x2={-6}
+              y1={0}
+              y2={0}
+            />
+            <text
+              className="rv-xy-plot__axis__tick__text"
+              dy="0.32em"
+              style={Object {}}
+              textAnchor="end"
+              transform="translate(-14, 0)"
+            >
+              1.0
+            </text>
+          </g>
+          <g
+            className="rv-xy-plot__axis__tick"
+            style={Object {}}
+            transform="translate(0, 62.5)"
+          >
+            <line
+              className="rv-xy-plot__axis__tick__line"
+              style={Object {}}
+              x1={6}
+              x2={-6}
+              y1={0}
+              y2={0}
+            />
+            <text
+              className="rv-xy-plot__axis__tick__text"
+              dy="0.32em"
+              style={Object {}}
+              textAnchor="end"
+              transform="translate(-14, 0)"
+            >
+              1.5
+            </text>
+          </g>
+          <g
+            className="rv-xy-plot__axis__tick"
+            style={Object {}}
+            transform="translate(0, 0)"
+          >
+            <line
+              className="rv-xy-plot__axis__tick__line"
+              style={Object {}}
+              x1={6}
+              x2={-6}
+              y1={0}
+              y2={0}
+            />
+            <text
+              className="rv-xy-plot__axis__tick__text"
+              dy="0.32em"
+              style={Object {}}
+              textAnchor="end"
+              transform="translate(-14, 0)"
+            >
+              2.0
+            </text>
+          </g>
+        </g>
+        <g
+          className="rv-xy-plot__axis__title"
+          transform="translate(40, 0)"
+        >
+          <g
+            style={
+              Object {
+                "textAnchor": "end",
+              }
+            }
+            transform="translate(16, 6) rotate(-90)"
+          >
+            <text
+              style={Object {}}
+            >
+              Number of packs opened
+            </text>
+          </g>
+        </g>
+      </g>
+    </svg>
+  </div>
+</div>
+`;

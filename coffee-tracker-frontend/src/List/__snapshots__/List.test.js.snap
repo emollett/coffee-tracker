@@ -42,16 +42,16 @@ exports[`renders correctly 1`] = `
           </td>
           <td>
             <time
-              dateTime={"2018-07-13T07:01:41.522Z"}
+              dateTime={"2018-05-13T07:01:41.522Z"}
             >
-              13/07/2018
+              13/05/2018
             </time>
           </td>
           <td>
             <time
-              dateTime={"2018-07-13T07:01:41.522Z"}
+              dateTime={"2018-05-13T07:01:41.522Z"}
             >
-              13/07/2018
+              13/05/2018
             </time>
           </td>
           <td>
@@ -126,16 +126,16 @@ exports[`renders correctly 1`] = `
           </td>
           <td>
             <time
-              dateTime={"2018-07-13T07:01:41.522Z"}
+              dateTime={"2018-06-13T07:01:41.522Z"}
             >
-              13/07/2018
+              13/06/2018
             </time>
           </td>
           <td>
             <time
-              dateTime={"2018-07-13T07:01:41.522Z"}
+              dateTime={"2018-06-13T07:01:41.522Z"}
             >
-              13/07/2018
+              13/06/2018
             </time>
           </td>
           <td>
@@ -154,16 +154,16 @@ exports[`renders correctly 1`] = `
           </td>
           <td>
             <time
-              dateTime={"2018-07-13T07:01:41.522Z"}
+              dateTime={"2018-06-13T07:01:41.522Z"}
             >
-              13/07/2018
+              13/06/2018
             </time>
           </td>
           <td>
             <time
-              dateTime={"2018-07-13T07:01:41.522Z"}
+              dateTime={"2018-06-13T07:01:41.522Z"}
             >
-              13/07/2018
+              13/06/2018
             </time>
           </td>
           <td>
@@ -189,9 +189,9 @@ exports[`renders correctly 1`] = `
           </td>
           <td>
             <time
-              dateTime={"2018-07-13T07:01:41.522Z"}
+              dateTime={"2019-07-13T07:01:41.522Z"}
             >
-              13/07/2018
+              13/07/2019
             </time>
           </td>
           <td>

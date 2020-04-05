@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import '../App.css';
 import Moment from 'react-moment';
 import {XYPlot, XAxis, YAxis, HorizontalGridLines, LineSeries, MarkSeries} from 'react-vis';
 import "react-vis/dist/style.css";
@@ -15,7 +15,7 @@ class Graph extends Component {
 
       var monthofDate = new Date(entry.date);
 
-      if (monthofDate.getYear() == 70 || monthofDate == 'Invalid Date'){
+      if (monthofDate.getYear() === 70 || monthofDate == 'Invalid Date'){
       }else{
 
         var months = coffeeByMonth.find(months => {return months.monthOpened === monthofDate.getMonth() && months.yearOpened === monthofDate.getYear()});
@@ -48,7 +48,7 @@ class Graph extends Component {
     var i;
     for (i=0; i<(coffeeByMonth.length-1); i++){
       //if a month is missing, insert an entry for that month with no purchases
-      if (coffeeByMonth[i].sortNumber == coffeeByMonth[i+1].sortNumber - 1){
+      if (coffeeByMonth[i].sortNumber === coffeeByMonth[i+1].sortNumber - 1){
       }else{
         monthofDate = new Date(coffeeByMonth[i].label);
 

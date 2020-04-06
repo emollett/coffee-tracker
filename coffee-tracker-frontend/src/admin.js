@@ -1,48 +1,48 @@
-import React, { Component } from 'react';
-import { Button } from 'react-bootstrap';
-import './App.css';
-import Input from './input.js';
-import Edit from './edit.js';
-import List from './List/List.js';
-import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import { withRouter} from 'react-router-dom';
+import React, { Component } from "react";
+import { Button } from "react-bootstrap";
+import "./App.css";
+import Input from "./input.js";
+import Edit from "./edit.js";
+import List from "./List/List.js";
+import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import { withRouter} from "react-router-dom";
 
 
 class Admin extends Component {
 
-  login() {
-    this.props.auth.login();
-  }
+	// login() {
+	//   this.props.auth.login();
+	// }
 
-  logout() {
-    this.props.auth.logout();
-  }
-
-
-  async componentDidMount() {
-    try {
-      setInterval(async () => {
-        const { renewSession } = this.props.auth;
-        console.log("Is logged is " + localStorage.getItem('isLoggedIn'));
-
-        if (localStorage.getItem('isLoggedIn') === 'true') {
-          console.log("The check of the isLoggedIn worked")
-          renewSession();
-        }
-      }, 9000)
-    } catch(error) {
-      console.error(error);
-    }
-  }
+	// logout() {
+	//   this.props.auth.logout();
+	// }
 
 
-    render() {
+	// async componentDidMount() {
+	//   try {
+	//     setInterval(async () => {
+	//       const { renewSession } = this.props.auth;
+	//       console.log("Is logged is " + localStorage.getItem('isLoggedIn'));
 
-      const { isAuthenticated } = this.props.auth;
+	//       if (localStorage.getItem('isLoggedIn') === 'true') {
+	//         console.log("The check of the isLoggedIn worked")
+	//         renewSession();
+	//       }
+	//     }, 9000)
+	//   } catch(error) {
+	//     console.error(error);
+	//   }
+	// }
 
-      return (
-        <div className="bigPadding">
-              {
+
+	render() {
+
+		// const { isAuthenticated } = this.props.auth;
+
+		return (
+			<div className="bigPadding">
+				{/* {
                 !isAuthenticated() && (
                     <Button
                       id="qsLoginBtn"
@@ -65,29 +65,29 @@ class Admin extends Component {
                       Log Out
                     </Button>
                   )
-              }
+              } */}
 
-            <Tabs>
-              <TabList>
-                <Tab><h3>Add a coffee</h3></Tab>
-                <Tab><h3>Edit an entry</h3></Tab>
-              </TabList>
+				<Tabs>
+					<TabList>
+						<Tab><h3>Add a coffee</h3></Tab>
+						<Tab><h3>Edit an entry</h3></Tab>
+					</TabList>
 
-              <TabPanel>
-                <Input data={this.props.data}/>
-              </TabPanel>
+					<TabPanel>
+						<Input data={this.props.data}/>
+					</TabPanel>
 
-              <TabPanel>
-                <Edit data={this.props.data}/>
-              </TabPanel>
-            </Tabs>
+					<TabPanel>
+						<Edit data={this.props.data}/>
+					</TabPanel>
+				</Tabs>
 
-            <List data={this.props.data}/>
+				<List data={this.props.data}/>
 
-        </div>
-      );
+			</div>
+		);
 
-    }
-  }
+	}
+}
 
 export default withRouter(Admin);

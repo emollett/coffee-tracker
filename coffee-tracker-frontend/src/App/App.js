@@ -3,7 +3,7 @@ import {Route, Router, withRouter} from 'react-router-dom';
 import '../App.css';
 import Output from '../Output/Output.js';
 import io from 'socket.io-client';
-import Home from '../Home/Home';
+import Admin from '../admin';
 import Callback from '../Callback/Callback';
 import Auth from '../Auth/Auth';
 import Graph from '../Graph/Graph.js';
@@ -43,13 +43,13 @@ class App extends Component {
         });
     };
 
-    auth = new Auth();
+    // auth = new Auth();
 
-    handleAuthentication = ({location}) => {
-      if (/access_token|id_token|error/.test(location.hash)) {
-        this.auth.handleAuthentication();
-      }
-    }
+    // handleAuthentication = ({location}) => {
+    //   if (/access_token|id_token|error/.test(location.hash)) {
+    //     this.auth.handleAuthentication();
+    //   }
+    // }
 
 
     render() {
@@ -61,12 +61,12 @@ class App extends Component {
 
           <div>
             <Route exact path="/" render={(props) => <Output data={this.state.data}/>} />
-            <Route exact path="/admin" render={(props) => <Home data={this.state.data } auth={this.auth} {...props} />} />
+            <Route exact path="/admin" render={(props) => <Admin data={this.state.data } />} />
             <Route exact path="/graph" render={(props) => <Graph data={this.state.data }/>} />
-            <Route path="/callback" render={(props) => {
+            {/* <Route path="/callback" render={(props) => {
               this.handleAuthentication(props);
               return <Callback {...props} />
-            }}/>
+            }}/> */}
           </div>
         </Router>
 

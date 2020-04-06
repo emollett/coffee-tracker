@@ -5,24 +5,24 @@ import { Button } from "react-bootstrap";
 
 class Home extends Component {
 
-	login() {
-		this.props.auth.login();
-	}
+	// login() {
+	// 	this.props.auth.login();
+	// }
 
 
 	render() {
-		const { isAuthenticated } = this.props.auth;
+		// const { isAuthenticated } = this.props.auth;
 		return (
 			<div>
-				{
+				{/* {
 					isAuthenticated() && (
 						<div>
 							<p className="bigPadding">
                 You are logged in!
-							</p>
+							</p> */}
 
-							<Admin data={this.props.data } auth={this.props.auth} />
-						</div>
+				<Admin data={this.props.data } auth={this.props.auth} />
+				{/* </div>
 					)
 				}
 				{
@@ -40,7 +40,7 @@ class Home extends Component {
 							{" "}to continue.
 						</p>
 					)
-				}
+				} */}
 			</div>
 		);
 	}

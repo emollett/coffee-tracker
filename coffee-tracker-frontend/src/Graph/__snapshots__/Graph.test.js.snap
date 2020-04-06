@@ -4,312 +4,9 @@ exports[`renders correctly 1`] = `
 <div
   className="bigPadding"
 >
-  <ul>
-    <div>
-      <p>
-        <strong>
-          <time
-            dateTime={"2020-03-31T23:00:00.000Z"}
-          >
-            April
-          </time>
-          /
-          <time
-            dateTime={"2018-01-01T00:00:00.000Z"}
-          >
-            2018
-          </time>
-        </strong>
-         : 
-        0
-      </p>
-    </div>
-    <div>
-      <p>
-        <strong>
-          <time
-            dateTime={"2020-04-30T23:00:00.000Z"}
-          >
-            May
-          </time>
-          /
-          <time
-            dateTime={"2018-01-01T00:00:00.000Z"}
-          >
-            2018
-          </time>
-        </strong>
-         : 
-        1
-      </p>
-    </div>
-    <div>
-      <p>
-        <strong>
-          <time
-            dateTime={"2020-05-31T23:00:00.000Z"}
-          >
-            June
-          </time>
-          /
-          <time
-            dateTime={"2018-01-01T00:00:00.000Z"}
-          >
-            2018
-          </time>
-        </strong>
-         : 
-        2
-      </p>
-    </div>
-    <div>
-      <p>
-        <strong>
-          <time
-            dateTime={"2020-06-30T23:00:00.000Z"}
-          >
-            July
-          </time>
-          /
-          <time
-            dateTime={"2018-01-01T00:00:00.000Z"}
-          >
-            2018
-          </time>
-        </strong>
-         : 
-        2
-      </p>
-    </div>
-    <div>
-      <p>
-        <strong>
-          <time
-            dateTime={"2020-07-31T23:00:00.000Z"}
-          >
-            August
-          </time>
-          /
-          <time
-            dateTime={"2018-01-01T00:00:00.000Z"}
-          >
-            2018
-          </time>
-        </strong>
-         : 
-        0
-      </p>
-    </div>
-    <div>
-      <p>
-        <strong>
-          <time
-            dateTime={"2020-08-31T23:00:00.000Z"}
-          >
-            September
-          </time>
-          /
-          <time
-            dateTime={"2018-01-01T00:00:00.000Z"}
-          >
-            2018
-          </time>
-        </strong>
-         : 
-        0
-      </p>
-    </div>
-    <div>
-      <p>
-        <strong>
-          <time
-            dateTime={"2020-09-30T23:00:00.000Z"}
-          >
-            October
-          </time>
-          /
-          <time
-            dateTime={"2018-01-01T00:00:00.000Z"}
-          >
-            2018
-          </time>
-        </strong>
-         : 
-        0
-      </p>
-    </div>
-    <div>
-      <p>
-        <strong>
-          <time
-            dateTime={"2020-11-01T00:00:00.000Z"}
-          >
-            November
-          </time>
-          /
-          <time
-            dateTime={"2018-01-01T00:00:00.000Z"}
-          >
-            2018
-          </time>
-        </strong>
-         : 
-        0
-      </p>
-    </div>
-    <div>
-      <p>
-        <strong>
-          <time
-            dateTime={"2020-12-01T00:00:00.000Z"}
-          >
-            December
-          </time>
-          /
-          <time
-            dateTime={"2018-01-01T00:00:00.000Z"}
-          >
-            2018
-          </time>
-        </strong>
-         : 
-        0
-      </p>
-    </div>
-    <div>
-      <p>
-        <strong>
-          <time
-            dateTime={null}
-          >
-            Invalid date
-          </time>
-          /
-          <time
-            dateTime={"2018-01-01T00:00:00.000Z"}
-          >
-            2018
-          </time>
-        </strong>
-         : 
-        0
-      </p>
-    </div>
-    <div>
-      <p>
-        <strong>
-          <time
-            dateTime={null}
-          >
-            Invalid date
-          </time>
-          /
-          <time
-            dateTime={"2018-01-01T00:00:00.000Z"}
-          >
-            2018
-          </time>
-        </strong>
-         : 
-        0
-      </p>
-    </div>
-    <div>
-      <p>
-        <strong>
-          <time
-            dateTime={null}
-          >
-            Invalid date
-          </time>
-          /
-          <time
-            dateTime={"2018-01-01T00:00:00.000Z"}
-          >
-            2018
-          </time>
-        </strong>
-         : 
-        0
-      </p>
-    </div>
-    <div>
-      <p>
-        <strong>
-          <time
-            dateTime={null}
-          >
-            Invalid date
-          </time>
-          /
-          <time
-            dateTime={"2018-01-01T00:00:00.000Z"}
-          >
-            2018
-          </time>
-        </strong>
-         : 
-        0
-      </p>
-    </div>
-    <div>
-      <p>
-        <strong>
-          <time
-            dateTime={null}
-          >
-            Invalid date
-          </time>
-          /
-          <time
-            dateTime={"2018-01-01T00:00:00.000Z"}
-          >
-            2018
-          </time>
-        </strong>
-         : 
-        0
-      </p>
-    </div>
-    <div>
-      <p>
-        <strong>
-          <time
-            dateTime={null}
-          >
-            Invalid date
-          </time>
-          /
-          <time
-            dateTime={"2018-01-01T00:00:00.000Z"}
-          >
-            2018
-          </time>
-        </strong>
-         : 
-        0
-      </p>
-    </div>
-    <div>
-      <p>
-        <strong>
-          <time
-            dateTime={"2020-06-30T23:00:00.000Z"}
-          >
-            July
-          </time>
-          /
-          <time
-            dateTime={"2019-01-01T00:00:00.000Z"}
-          >
-            2019
-          </time>
-        </strong>
-         : 
-        1
-      </p>
-    </div>
-  </ul>
+  <h2>
+    Graph of how much coffee is being purchased each month
+  </h2>
   <div
     className="rv-xy-plot "
     style={
@@ -398,7 +95,7 @@ exports[`renders correctly 1`] = `
           }
         />
         <circle
-          cx={11.318242343541943}
+          cx={55.921052631578945}
           cy={125}
           onClick={[Function]}
           onContextMenu={[Function]}
@@ -415,7 +112,7 @@ exports[`renders correctly 1`] = `
           }
         />
         <circle
-          cx={23.01375943186862}
+          cx={113.70614035087719}
           cy={0}
           onClick={[Function]}
           onContextMenu={[Function]}
@@ -432,7 +129,7 @@ exports[`renders correctly 1`] = `
           }
         />
         <circle
-          cx={34.33200177541056}
+          cx={169.62719298245614}
           cy={0}
           onClick={[Function]}
           onContextMenu={[Function]}
@@ -449,7 +146,7 @@ exports[`renders correctly 1`] = `
           }
         />
         <circle
-          cx={46.02751886373724}
+          cx={227.41228070175438}
           cy={250}
           onClick={[Function]}
           onContextMenu={[Function]}
@@ -466,7 +163,7 @@ exports[`renders correctly 1`] = `
           }
         />
         <circle
-          cx={57.72303595206392}
+          cx={285.1973684210526}
           cy={250}
           onClick={[Function]}
           onContextMenu={[Function]}
@@ -483,7 +180,7 @@ exports[`renders correctly 1`] = `
           }
         />
         <circle
-          cx={69.04127829560586}
+          cx={341.1184210526316}
           cy={250}
           onClick={[Function]}
           onContextMenu={[Function]}
@@ -500,7 +197,7 @@ exports[`renders correctly 1`] = `
           }
         />
         <circle
-          cx={80.75251516496523}
+          cx={398.9811769005848}
           cy={250}
           onClick={[Function]}
           onContextMenu={[Function]}
@@ -517,7 +214,7 @@ exports[`renders correctly 1`] = `
           }
         />
         <circle
-          cx={92.07075750850717}
+          cx={454.90222953216374}
           cy={250}
           onClick={[Function]}
           onContextMenu={[Function]}
@@ -534,7 +231,7 @@ exports[`renders correctly 1`] = `
           }
         />
         <circle
-          cx={103.76627459683384}
+          cx={512.687317251462}
           cy={250}
           onClick={[Function]}
           onContextMenu={[Function]}
@@ -551,7 +248,7 @@ exports[`renders correctly 1`] = `
           }
         />
         <circle
-          cx={253.16707353158753}
+          cx={570.4724049707602}
           cy={250}
           onClick={[Function]}
           onContextMenu={[Function]}
@@ -568,7 +265,7 @@ exports[`renders correctly 1`] = `
           }
         />
         <circle
-          cx={401.81332297677176}
+          cx={622.6653874269006}
           cy={250}
           onClick={[Function]}
           onContextMenu={[Function]}
@@ -585,7 +282,7 @@ exports[`renders correctly 1`] = `
           }
         />
         <circle
-          cx={551.1984021304927}
+          cx={680.3728070175439}
           cy={250}
           onClick={[Function]}
           onContextMenu={[Function]}
@@ -602,7 +299,24 @@ exports[`renders correctly 1`] = `
           }
         />
         <circle
-          cx={700.2219263204615}
+          cx={736.2938596491227}
+          cy={250}
+          onClick={[Function]}
+          onContextMenu={[Function]}
+          onMouseOut={[Function]}
+          onMouseOver={[Function]}
+          r={5}
+          style={
+            Object {
+              "fill": "#12939A",
+              "opacity": 1,
+              "stroke": "#12939A",
+              "strokeWidth": 1,
+            }
+          }
+        />
+        <circle
+          cx={794.078947368421}
           cy={250}
           onClick={[Function]}
           onContextMenu={[Function]}
@@ -620,23 +334,6 @@ exports[`renders correctly 1`] = `
         />
         <circle
           cx={850}
-          cy={250}
-          onClick={[Function]}
-          onContextMenu={[Function]}
-          onMouseOut={[Function]}
-          onMouseOver={[Function]}
-          r={5}
-          style={
-            Object {
-              "fill": "#12939A",
-              "opacity": 1,
-              "stroke": "#12939A",
-              "strokeWidth": 1,
-            }
-          }
-        />
-        <circle
-          cx={172.03728362183756}
           cy={125}
           onClick={[Function]}
           onContextMenu={[Function]}
@@ -655,7 +352,7 @@ exports[`renders correctly 1`] = `
       </g>
       <path
         className="rv-xy-plot__series rv-xy-plot__series--line "
-        d="M0,250L11.318242343541943,125L23.01375943186862,0L34.33200177541056,0L46.02751886373724,250L57.72303595206392,250L69.04127829560586,250L80.75251516496523,250L92.07075750850717,250L103.76627459683384,250L253.16707353158753,250L401.81332297677176,250L551.1984021304927,250L700.2219263204615,250L850,250L172.03728362183756,125"
+        d="M0,250L55.921052631578945,125L113.70614035087719,0L169.62719298245614,0L227.41228070175438,250L285.1973684210526,250L341.1184210526316,250L398.9811769005848,250L454.90222953216374,250L512.687317251462,250L570.4724049707602,250L622.6653874269006,250L680.3728070175439,250L736.2938596491227,250L794.078947368421,250L850,125"
         onClick={[Function]}
         onContextMenu={[Function]}
         onMouseOut={[Function]}
@@ -690,7 +387,53 @@ exports[`renders correctly 1`] = `
           <g
             className="rv-xy-plot__axis__tick"
             style={Object {}}
-            transform="translate(103.64007304201394, 0)"
+            transform="translate(169.00365766883937, 0)"
+          >
+            <line
+              className="rv-xy-plot__axis__tick__line"
+              style={Object {}}
+              x1={0}
+              x2={0}
+              y1={-6}
+              y2={6}
+            />
+            <text
+              className="rv-xy-plot__axis__tick__text"
+              dy="0"
+              style={Object {}}
+              textAnchor="end"
+              transform="translate(0, 14) rotate(-30)"
+            >
+              July
+            </text>
+          </g>
+          <g
+            className="rv-xy-plot__axis__tick"
+            style={Object {}}
+            transform="translate(340.49488573901476, 0)"
+          >
+            <line
+              className="rv-xy-plot__axis__tick__line"
+              style={Object {}}
+              x1={0}
+              x2={0}
+              y1={-6}
+              y2={6}
+            />
+            <text
+              className="rv-xy-plot__axis__tick__text"
+              dy="0"
+              style={Object {}}
+              textAnchor="end"
+              transform="translate(0, 14) rotate(-30)"
+            >
+              October
+            </text>
+          </g>
+          <g
+            className="rv-xy-plot__axis__tick"
+            style={Object {}}
+            transform="translate(512.0637819378452, 0)"
           >
             <line
               className="rv-xy-plot__axis__tick__line"
@@ -713,7 +456,7 @@ exports[`renders correctly 1`] = `
           <g
             className="rv-xy-plot__axis__tick"
             style={Object {}}
-            transform="translate(241.34535488844094, 0)"
+            transform="translate(679.7492717039271, 0)"
           >
             <line
               className="rv-xy-plot__axis__tick__line"
@@ -730,13 +473,13 @@ exports[`renders correctly 1`] = `
               textAnchor="end"
               transform="translate(0, 14) rotate(-30)"
             >
-              2020
+              April
             </text>
           </g>
           <g
             className="rv-xy-plot__axis__tick"
             style={Object {}}
-            transform="translate(379.42791147965266, 0)"
+            transform="translate(849.3764646863832, 0)"
           >
             <line
               className="rv-xy-plot__axis__tick__line"
@@ -753,76 +496,7 @@ exports[`renders correctly 1`] = `
               textAnchor="end"
               transform="translate(0, 14) rotate(-30)"
             >
-              2021
-            </text>
-          </g>
-          <g
-            className="rv-xy-plot__axis__tick"
-            style={Object {}}
-            transform="translate(517.1331933260797, 0)"
-          >
-            <line
-              className="rv-xy-plot__axis__tick__line"
-              style={Object {}}
-              x1={0}
-              x2={0}
-              y1={-6}
-              y2={6}
-            />
-            <text
-              className="rv-xy-plot__axis__tick__text"
-              dy="0"
-              style={Object {}}
-              textAnchor="end"
-              transform="translate(0, 14) rotate(-30)"
-            >
-              2022
-            </text>
-          </g>
-          <g
-            className="rv-xy-plot__axis__tick"
-            style={Object {}}
-            transform="translate(654.8384751725066, 0)"
-          >
-            <line
-              className="rv-xy-plot__axis__tick__line"
-              style={Object {}}
-              x1={0}
-              x2={0}
-              y1={-6}
-              y2={6}
-            />
-            <text
-              className="rv-xy-plot__axis__tick__text"
-              dy="0"
-              style={Object {}}
-              textAnchor="end"
-              transform="translate(0, 14) rotate(-30)"
-            >
-              2023
-            </text>
-          </g>
-          <g
-            className="rv-xy-plot__axis__tick"
-            style={Object {}}
-            transform="translate(792.5437570189337, 0)"
-          >
-            <line
-              className="rv-xy-plot__axis__tick__line"
-              style={Object {}}
-              x1={0}
-              x2={0}
-              y1={-6}
-              y2={6}
-            />
-            <text
-              className="rv-xy-plot__axis__tick__text"
-              dy="0"
-              style={Object {}}
-              textAnchor="end"
-              transform="translate(0, 14) rotate(-30)"
-            >
-              2024
+              July
             </text>
           </g>
         </g>
@@ -1001,5 +675,314 @@ exports[`renders correctly 1`] = `
       </g>
     </svg>
   </div>
+  <h3>
+    Data from the graph
+  </h3>
+  <ul>
+    <div>
+      <p>
+        <strong>
+          <time
+            dateTime={"2020-03-31T23:00:00.000Z"}
+          >
+            April
+          </time>
+          /
+          <time
+            dateTime={"2018-01-01T00:00:00.000Z"}
+          >
+            2018
+          </time>
+        </strong>
+         : 
+        0
+      </p>
+    </div>
+    <div>
+      <p>
+        <strong>
+          <time
+            dateTime={"2020-04-30T23:00:00.000Z"}
+          >
+            May
+          </time>
+          /
+          <time
+            dateTime={"2018-01-01T00:00:00.000Z"}
+          >
+            2018
+          </time>
+        </strong>
+         : 
+        1
+      </p>
+    </div>
+    <div>
+      <p>
+        <strong>
+          <time
+            dateTime={"2020-05-31T23:00:00.000Z"}
+          >
+            June
+          </time>
+          /
+          <time
+            dateTime={"2018-01-01T00:00:00.000Z"}
+          >
+            2018
+          </time>
+        </strong>
+         : 
+        2
+      </p>
+    </div>
+    <div>
+      <p>
+        <strong>
+          <time
+            dateTime={"2020-06-30T23:00:00.000Z"}
+          >
+            July
+          </time>
+          /
+          <time
+            dateTime={"2018-01-01T00:00:00.000Z"}
+          >
+            2018
+          </time>
+        </strong>
+         : 
+        2
+      </p>
+    </div>
+    <div>
+      <p>
+        <strong>
+          <time
+            dateTime={"2020-07-31T23:00:00.000Z"}
+          >
+            August
+          </time>
+          /
+          <time
+            dateTime={"2018-01-01T00:00:00.000Z"}
+          >
+            2018
+          </time>
+        </strong>
+         : 
+        0
+      </p>
+    </div>
+    <div>
+      <p>
+        <strong>
+          <time
+            dateTime={"2020-08-31T23:00:00.000Z"}
+          >
+            September
+          </time>
+          /
+          <time
+            dateTime={"2018-01-01T00:00:00.000Z"}
+          >
+            2018
+          </time>
+        </strong>
+         : 
+        0
+      </p>
+    </div>
+    <div>
+      <p>
+        <strong>
+          <time
+            dateTime={"2020-09-30T23:00:00.000Z"}
+          >
+            October
+          </time>
+          /
+          <time
+            dateTime={"2018-01-01T00:00:00.000Z"}
+          >
+            2018
+          </time>
+        </strong>
+         : 
+        0
+      </p>
+    </div>
+    <div>
+      <p>
+        <strong>
+          <time
+            dateTime={"2020-11-01T00:00:00.000Z"}
+          >
+            November
+          </time>
+          /
+          <time
+            dateTime={"2018-01-01T00:00:00.000Z"}
+          >
+            2018
+          </time>
+        </strong>
+         : 
+        0
+      </p>
+    </div>
+    <div>
+      <p>
+        <strong>
+          <time
+            dateTime={"2020-12-01T00:00:00.000Z"}
+          >
+            December
+          </time>
+          /
+          <time
+            dateTime={"2018-01-01T00:00:00.000Z"}
+          >
+            2018
+          </time>
+        </strong>
+         : 
+        0
+      </p>
+    </div>
+    <div>
+      <p>
+        <strong>
+          <time
+            dateTime={"2020-01-01T00:00:00.000Z"}
+          >
+            January
+          </time>
+          /
+          <time
+            dateTime={"2019-01-01T00:00:00.000Z"}
+          >
+            2019
+          </time>
+        </strong>
+         : 
+        0
+      </p>
+    </div>
+    <div>
+      <p>
+        <strong>
+          <time
+            dateTime={"2020-02-01T00:00:00.000Z"}
+          >
+            February
+          </time>
+          /
+          <time
+            dateTime={"2019-01-01T00:00:00.000Z"}
+          >
+            2019
+          </time>
+        </strong>
+         : 
+        0
+      </p>
+    </div>
+    <div>
+      <p>
+        <strong>
+          <time
+            dateTime={"2020-03-01T00:00:00.000Z"}
+          >
+            March
+          </time>
+          /
+          <time
+            dateTime={"2019-01-01T00:00:00.000Z"}
+          >
+            2019
+          </time>
+        </strong>
+         : 
+        0
+      </p>
+    </div>
+    <div>
+      <p>
+        <strong>
+          <time
+            dateTime={"2020-03-31T23:00:00.000Z"}
+          >
+            April
+          </time>
+          /
+          <time
+            dateTime={"2019-01-01T00:00:00.000Z"}
+          >
+            2019
+          </time>
+        </strong>
+         : 
+        0
+      </p>
+    </div>
+    <div>
+      <p>
+        <strong>
+          <time
+            dateTime={"2020-04-30T23:00:00.000Z"}
+          >
+            May
+          </time>
+          /
+          <time
+            dateTime={"2019-01-01T00:00:00.000Z"}
+          >
+            2019
+          </time>
+        </strong>
+         : 
+        0
+      </p>
+    </div>
+    <div>
+      <p>
+        <strong>
+          <time
+            dateTime={"2020-05-31T23:00:00.000Z"}
+          >
+            June
+          </time>
+          /
+          <time
+            dateTime={"2019-01-01T00:00:00.000Z"}
+          >
+            2019
+          </time>
+        </strong>
+         : 
+        0
+      </p>
+    </div>
+    <div>
+      <p>
+        <strong>
+          <time
+            dateTime={"2020-06-30T23:00:00.000Z"}
+          >
+            July
+          </time>
+          /
+          <time
+            dateTime={"2019-01-01T00:00:00.000Z"}
+          >
+            2019
+          </time>
+        </strong>
+         : 
+        1
+      </p>
+    </div>
+  </ul>
 </div>
 `;

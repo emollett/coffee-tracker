@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Button } from "react-bootstrap";
 import "./App.css";
 import Input from "./input.js";
 import Edit from "./edit.js";
@@ -10,62 +9,10 @@ import { withRouter} from "react-router-dom";
 
 class Admin extends Component {
 
-	// login() {
-	//   this.props.auth.login();
-	// }
-
-	// logout() {
-	//   this.props.auth.logout();
-	// }
-
-
-	// async componentDidMount() {
-	//   try {
-	//     setInterval(async () => {
-	//       const { renewSession } = this.props.auth;
-	//       console.log("Is logged is " + localStorage.getItem('isLoggedIn'));
-
-	//       if (localStorage.getItem('isLoggedIn') === 'true') {
-	//         console.log("The check of the isLoggedIn worked")
-	//         renewSession();
-	//       }
-	//     }, 9000)
-	//   } catch(error) {
-	//     console.error(error);
-	//   }
-	// }
-
-
 	render() {
-
-		// const { isAuthenticated } = this.props.auth;
 
 		return (
 			<div className="bigPadding">
-				{/* {
-                !isAuthenticated() && (
-                    <Button
-                      id="qsLoginBtn"
-                      bsStyle="primary"
-                      className="btn-margin"
-                      onClick={this.login.bind(this)}
-                    >
-                      Log In
-                    </Button>
-                  )
-              }
-              {
-                isAuthenticated() && (
-                    <Button
-                      id="qsLogoutBtn"
-                      bsStyle="primary"
-                      className="btn-margin"
-                      onClick={this.logout.bind(this)}
-                    >
-                      Log Out
-                    </Button>
-                  )
-              } */}
 
 				<Tabs>
 					<TabList>
@@ -86,7 +33,6 @@ class Admin extends Component {
 
 			</div>
 		);
-
 	}
 }
 

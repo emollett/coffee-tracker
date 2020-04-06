@@ -4,12 +4,8 @@ import '../App.css';
 import Output from '../Output/Output.js';
 import io from 'socket.io-client';
 import Admin from '../admin';
-import Callback from '../Callback/Callback';
-import Auth from '../Auth/Auth';
 import Graph from '../Graph/Graph.js';
 import history from '../history';
-
-
 
 class App extends Component {
 
@@ -43,34 +39,18 @@ class App extends Component {
         });
     };
 
-    // auth = new Auth();
-
-    // handleAuthentication = ({location}) => {
-    //   if (/access_token|id_token|error/.test(location.hash)) {
-    //     this.auth.handleAuthentication();
-    //   }
-    // }
-
-
     render() {
       if (!this.state.hasInitialData ) return <h1>Loading...</h1>;
 
       return (
 
         <Router history={history}>
-
           <div>
             <Route exact path="/" render={(props) => <Output data={this.state.data}/>} />
             <Route exact path="/admin" render={(props) => <Admin data={this.state.data } />} />
             <Route exact path="/graph" render={(props) => <Graph data={this.state.data }/>} />
-            {/* <Route path="/callback" render={(props) => {
-              this.handleAuthentication(props);
-              return <Callback {...props} />
-            }}/> */}
           </div>
         </Router>
-
-
 
       );
     }

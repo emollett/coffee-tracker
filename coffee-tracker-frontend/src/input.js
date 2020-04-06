@@ -50,8 +50,9 @@ class Input extends Component {
       <form id="new-coffee-form" className="bigPadding">
 
         <div className="smallPadding">
-        <h4>Add a coffee to the database</h4>
+        <label for="coffee">Add a coffee to the database</label><br></br>
           <input
+            id="coffee"
             type="text"
             required
             onChange={e => this.setState({ coffee: e.target.value })}
@@ -59,8 +60,9 @@ class Input extends Component {
         </div>
 
         <div className="smallPadding">
-        <h4>Who bought the coffee?</h4>
+        <label for="name">Who bought the coffee?</label><br></br>
           <input
+            id="name"
             type="text"
             autoComplete="given-name"
             required
@@ -69,24 +71,27 @@ class Input extends Component {
         </div>
 
         <div className="smallPadding">
-        <h4>What date was it purchased?</h4>
+        <label for="datePurchased">What date was it purchased?</label><br></br>
           <input
+            id="datePurchased"
             type="date"
             onChange={e => this.setState({ datePurchased: e.target.value })}
           />
         </div>
 
         <div className="smallPadding">
-        <h4>What date was it opened?</h4>
+        <label for="dateOpened">What date was it opened?</label><br></br>
           <input
+            id="dateOpened"
             type="date"
             onChange={e => this.setState({ date: e.target.value })}
           />
         </div>
 
         <div className="smallPadding">
-        <h4>Add a note about the coffee</h4>
+        <label for="message">Add a note about the coffee</label><br></br>
           <input
+            id="message"
             type="text"
             onChange={e => this.setState({ message: e.target.value })}
           />

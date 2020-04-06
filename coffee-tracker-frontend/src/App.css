@@ -24,6 +24,13 @@ h1{
 
 h2, h3, h4{
   font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+}
+
+label{
+  font-family: 'Open Sans', sans-serif;
+  font-weight: normal;
+  font-size: 130%
 }
 
 .smallPadding{

@@ -66,8 +66,10 @@ class Edit extends Component {
 
         <form id="deleting-form" className="deleting">
             <div className="smallPadding">
-              <h4>Id of item to delete</h4>
+              <h4>Delete an item</h4>
+              <label for="idToDelete">Id of item to delete</label><br></br>
                 <input
+                  id="idToDelete"
                   type="text"
                   onChange={e => this.setState({ idToDelete: e.target.value })}
                 />
@@ -82,18 +84,22 @@ class Edit extends Component {
 
         <form id="updating-form" className="editing">
             <div className="smallPadding">
-              <h4>Id of item to update</h4>
+              <h4>Edit an entry</h4>
+              <label for="idToUpdate">Id of item to update</label><br></br>
                 <input
+                  id="idToUpdate"
                   type="text"
                   onChange={e => this.setState({ idToUpdate: e.target.value })}
                 />
-              <h4>New message</h4>
+              <label for="updatedMessage">New message</label><br></br>
                 <input
+                  id="updateMessage"
                   type="text"
                   onChange={e => this.setState({ updateToApply: e.target.value })}
                 />
-              <h4>New opened date</h4>
+              <label for="newDate">New opened date</label>
                 <input
+                  id="newDate"
                   type="date"
                   onChange={e => this.setState({ updateToDate: e.target.value })}
                 />

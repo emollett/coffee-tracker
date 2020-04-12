@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import "./App.css";
-import Input from "./input.js";
-import Edit from "./edit.js";
-import List from "./List/List.js";
+import "../App.css";
+import Input from "../Input/Input";
+import Edit from "../edit.js";
+import List from "../List/List";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import { withRouter} from "react-router-dom";
 

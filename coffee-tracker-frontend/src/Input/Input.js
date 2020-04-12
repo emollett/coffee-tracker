@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from "axios";
-import './App.css';
+import '../App.css';
 
 class Input extends Component {
 
@@ -13,8 +13,6 @@ class Input extends Component {
       datePurchased: null,
       date: null,
     };
-
-
 
     // our put method that uses our backend api
     // to create new query into our data base
@@ -47,10 +45,10 @@ class Input extends Component {
 
   render() {
     return (
-      <form id="new-coffee-form" className="bigPadding">
+      <form id="new-coffee-form" className="bigPadding" onSubmit={(event) => this.putDataToDB(this.state.message, this.state.name, this.state.coffee, this.state.date, this.state.datePurchased, event)}>
 
         <div className="smallPadding">
-        <label for="coffee">Add a coffee to the database</label><br></br>
+          <label htmlFor="coffee">Add a coffee to the database</label><br></br>
           <input
             id="coffee"
             type="text"
@@ -60,7 +58,7 @@ class Input extends Component {
         </div>
 
         <div className="smallPadding">
-        <label for="name">Who bought the coffee?</label><br></br>
+          <label htmlFor="name">Who bought the coffee?</label><br></br>
           <input
             id="name"
             type="text"
@@ -71,7 +69,7 @@ class Input extends Component {
         </div>
 
         <div className="smallPadding">
-        <label for="datePurchased">What date was it purchased?</label><br></br>
+          <label htmlFor="datePurchased">What date was it purchased?</label><br></br>
           <input
             id="datePurchased"
             type="date"
@@ -80,7 +78,7 @@ class Input extends Component {
         </div>
 
         <div className="smallPadding">
-        <label for="dateOpened">What date was it opened?</label><br></br>
+          <label htmlFor="dateOpened">What date was it opened?</label><br></br>
           <input
             id="dateOpened"
             type="date"
@@ -89,7 +87,7 @@ class Input extends Component {
         </div>
 
         <div className="smallPadding">
-        <label for="message">Add a note about the coffee</label><br></br>
+          <label htmlFor="message">Add a note about the coffee</label><br></br>
           <input
             id="message"
             type="text"
@@ -98,12 +96,11 @@ class Input extends Component {
         </div>
 
         <div className="smallPadding">
-
-          <button onClick={(event) => this.putDataToDB(this.state.message, this.state.name, this.state.coffee, this.state.date, this.state.datePurchased, event)}>
-
+          <button data-testid="submitCoffeeTest" type="submit">
             <h4>Add to database</h4>
           </button>
         </div>
+
       </form>
     );
   }

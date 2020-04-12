@@ -1,0 +1,100 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<form
+  className="bigPadding"
+  id="new-coffee-form"
+  onSubmit={[Function]}
+>
+  <div
+    className="smallPadding"
+  >
+    <label
+      htmlFor="coffee"
+    >
+      Add a coffee to the database
+    </label>
+    <br />
+    <input
+      id="coffee"
+      onChange={[Function]}
+      required={true}
+      type="text"
+    />
+  </div>
+  <div
+    className="smallPadding"
+  >
+    <label
+      htmlFor="name"
+    >
+      Who bought the coffee?
+    </label>
+    <br />
+    <input
+      autoComplete="given-name"
+      id="name"
+      onChange={[Function]}
+      required={true}
+      type="text"
+    />
+  </div>
+  <div
+    className="smallPadding"
+  >
+    <label
+      htmlFor="datePurchased"
+    >
+      What date was it purchased?
+    </label>
+    <br />
+    <input
+      id="datePurchased"
+      onChange={[Function]}
+      type="date"
+    />
+  </div>
+  <div
+    className="smallPadding"
+  >
+    <label
+      htmlFor="dateOpened"
+    >
+      What date was it opened?
+    </label>
+    <br />
+    <input
+      id="dateOpened"
+      onChange={[Function]}
+      type="date"
+    />
+  </div>
+  <div
+    className="smallPadding"
+  >
+    <label
+      htmlFor="message"
+    >
+      Add a note about the coffee
+    </label>
+    <br />
+    <input
+      id="message"
+      onChange={[Function]}
+      type="text"
+    />
+  </div>
+  <div
+    className="smallPadding"
+  >
+    <button
+      data-testid="submitCoffeeTest"
+      type="submit"
+    >
+      <h4>
+        Add to database
+      </h4>
+    </button>
+  </div>
+</form>
+`;

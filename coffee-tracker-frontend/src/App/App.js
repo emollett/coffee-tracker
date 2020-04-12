@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import {Route, Router, withRouter} from 'react-router-dom';
 import '../App.css';
-import Output from '../Output/Output.js';
+import Output from '../Output/Output';
 import io from 'socket.io-client';
-import Admin from '../admin';
-import Graph from '../Graph/Graph.js';
+import Admin from '../Admin/Admin';
+import Graph from '../Graph/Graph';
 import history from '../history';
 
 class App extends Component {

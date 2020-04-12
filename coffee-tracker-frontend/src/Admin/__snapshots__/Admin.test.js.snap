@@ -50,6 +50,7 @@ exports[`renders correctly 1`] = `
       <form
         className="bigPadding"
         id="new-coffee-form"
+        onSubmit={[Function]}
       >
         <div
           className="smallPadding"
@@ -134,7 +135,7 @@ exports[`renders correctly 1`] = `
         >
           <button
             data-testid="submitCoffeeTest"
-            onClick={[Function]}
+            type="submit"
           >
             <h4>
               Add to database

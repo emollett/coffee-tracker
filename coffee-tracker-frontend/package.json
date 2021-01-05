@@ -6,7 +6,7 @@
     "@babel/preset-env": "^7.9.0",
     "@babel/preset-react": "^7.9.4",
     "@reach/router": "^1.2.1",
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "chart.js": "^2.8.0",
     "dotenv": "^7.0.0",
     "express-jwt": "^6.0.0",
